@@ -44,7 +44,12 @@ app_license = "mit"
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+doctype_list_js = {
+    "Employee": "public/js/employee_list.js",
+    "Project": "public/js/project_list.js",
+    "Timesheet": "public/js/timesheet_list.js",
+    "Attendance": "public/js/attendance_list.js",
+}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
@@ -244,4 +249,3 @@ app_license = "mit"
 # fixtures = [
 #     {"dt": "Custom Field", "filters": [["module", "in", ["Dhwani Hrms"]]]},
 # ]
-
