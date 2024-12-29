@@ -23,10 +23,8 @@ def get_columns(filters=None):
     month = filters.get("month")
     year = int(filters.get("year"))
 
-    month_number = list(calendar.month_name).index(month)  # Get month number (1-12)
-    num_days = calendar.monthrange(year, month_number)[
-        1
-    ]  # Get number of days in the month
+    month_number = list(calendar.month_name).index(month)
+    num_days = calendar.monthrange(year, month_number)[1]
 
     columns = [
         {
@@ -75,13 +73,13 @@ def get_report_summary(data):
     }
 
     for row in data:
-        for date_str, status in row.items():  # Iterate through date columns
-            if isinstance(status, str):  # Check if it's a string status
+        for date_str, status in row.items():
+            if isinstance(status, str):
                 if status in status_counts:
                     status_counts[status] += 1
-                elif "Leave" in status:  # Count leave variations together
+                elif "Leave" in status:
                     status_counts["Leave"] += 1
-                elif "Work From Home" in status:  # Work From Home count
+                elif "Work From Home" in status:
                     status_counts["Work From Home"] += 1
 
     summary = []
@@ -120,16 +118,13 @@ def get_data(filters):
     if employee:
         conditions += f" AND name={employee}"
 
-    emp_temp = f"""
+    emp_template = f"""
         SELECT name, employee_name 
         FROM `tabEmployee` 
         {conditions} 
         """
-    frappe.logger("utils").exception(emp_temp)
-
-    # Modify the employee query to filter by employee_name
     employees = frappe.db.sql(
-        emp_temp,
+        emp_template,
         as_dict=True,
     )
 
@@ -141,7 +136,6 @@ def get_data(filters):
         for day in range(1, num_days + 1)
     ]
 
-    # Optimized queries
     attendance_data = get_attendance_data(year, month_number, num_days, employees)
     leave_data = get_leave_data(year, month_number, num_days, employees)
     wfh_data = get_wfh_data(year, month_number, num_days, employees)
@@ -153,11 +147,9 @@ def get_data(filters):
             status_dict = get_employee_status(
                 employee.name, date_str, attendance_data, leave_data, wfh_data
             )
-            row[date_str] = status_dict.get(
-                "status"
-            )  # Store the entire status dictionary
+            row[date_str] = status_dict.get("status")
 
-        data.append(row)  # Append row after the inner loop completes
+        data.append(row)
 
     chart = get_chart_data(data)
     return data, chart
@@ -213,9 +205,6 @@ def get_attendance_data(year, month_number, num_days, employees):
     )
 
 
-# Similar change in other data functions:
-
-
 def get_leave_data(year, month_number, num_days, employees):
     if not employees:
         return []
@@ -262,9 +251,8 @@ def get_employee_status(employee, date_str, attendance_data, leave_data, wfh_dat
 
     # Check if it's a weekend
     if current_date.weekday() in (5, 6):  # 5 is Saturday, 6 is Sunday
-        return {"status": "Weekoff", "color": "gray"}  # Gray for Weekoff
+        return {"status": "Weekoff", "color": "gray"}
 
-    # Check attendance status
     attendance = next(
         (
             a
@@ -275,15 +263,13 @@ def get_employee_status(employee, date_str, attendance_data, leave_data, wfh_dat
     )
     if attendance:
         status = attendance["status"]
-        # Example color logic (customize as needed)
         color = (
             "green" if status == "Present" else "red"
         )  # Green for Present, Red for Absent
         return {
             "status": status,
             "color": color,
-        }  # Dictionary to hold both the status and its color
-
+        }
     # Check leave status
     leave = next(
         (
@@ -298,7 +284,6 @@ def get_employee_status(employee, date_str, attendance_data, leave_data, wfh_dat
         leave_type = leave["leave_type"]
         half_day_text = " - Half Day" if leave["half_day"] else " - Full Day"
 
-        # Example: Orange for Leave (customize colors)
         return {"status": f"{leave_type}{half_day_text}", "color": "orange"}
 
     # Check Work From Home status
@@ -314,8 +299,6 @@ def get_employee_status(employee, date_str, attendance_data, leave_data, wfh_dat
     if wfh:
         reason = wfh["reason"]
         half_day_text = " - Half Day" if wfh["half_day"] else " - Full Day"
-        # Example: Purple for WFH (customize)
         return {"status": f"{reason}{half_day_text}", "color": "purple"}
 
-    # Default
     return {}
