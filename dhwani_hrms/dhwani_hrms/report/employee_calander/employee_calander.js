@@ -1,68 +1,107 @@
+// Copyright (c) 2015, Frappe Technologies Pvt. Ltd. and Contributors
+// License: GNU General Public License v3. See license.txt
+
 frappe.query_reports["Employee Calander"] = {
-	"filters": [
+	filters: [
 		{
 			fieldname: "month",
 			label: __("Month"),
 			fieldtype: "Select",
+			reqd: 1,
 			options: [
-				"January", "February", "March", "April", "May", "June",
-				"July", "August", "September", "October", "November", "December"
+				{ value: 1, label: __("Jan") },
+				{ value: 2, label: __("Feb") },
+				{ value: 3, label: __("Mar") },
+				{ value: 4, label: __("Apr") },
+				{ value: 5, label: __("May") },
+				{ value: 6, label: __("June") },
+				{ value: 7, label: __("July") },
+				{ value: 8, label: __("Aug") },
+				{ value: 9, label: __("Sep") },
+				{ value: 10, label: __("Oct") },
+				{ value: 11, label: __("Nov") },
+				{ value: 12, label: __("Dec") },
 			],
-			default: moment().format('MMMM') 
+			default: frappe.datetime.str_to_obj(frappe.datetime.get_today()).getMonth() + 1,
 		},
 		{
 			fieldname: "year",
 			label: __("Year"),
 			fieldtype: "Select",
-			options: [moment().subtract(1, 'year').format('YYYY'), moment().format('YYYY'), moment().add(1, 'year').format('YYYY')], // Example years
-			default: moment().format('YYYY')
+			reqd: 1,
 		},
 		{
-            "fieldname": "employee",
-            "label": __("Employee"),
-            "fieldtype": "Link",
-            "options": "Employee",
-        },
+			fieldname: "employee",
+			label: __("Employee"),
+			fieldtype: "Link",
+			options: "Employee",
+			get_query: () => {
+				var company = frappe.query_report.get_filter_value("company");
+				return {
+					filters: {
+						company: company,
+					},
+				};
+			},
+		},
+		{
+			fieldname: "company",
+			label: __("Company"),
+			fieldtype: "Link",
+			options: "Company",
+			default: frappe.defaults.get_user_default("Company"),
+			reqd: 1,
+		},
+		{
+			fieldname: "group_by",
+			label: __("Group By"),
+			fieldtype: "Select",
+			options: ["", "Branch", "Grade", "Department", "Designation"],
+		},
+		{
+			fieldname: "include_company_descendants",
+			label: __("Include Company Descendants"),
+			fieldtype: "Check",
+			default: 1,
+		},
+		{
+			fieldname: "summarized_view",
+			label: __("Summarized View"),
+			fieldtype: "Check",
+			default: 0,
+		},
 	],
-	"formatter": function(value, row, column, data, default_formatter) {
-        if (column.fieldname === "employee" || column.fieldname === "employee_name") {
-            return `<span style='color:black !important;'>${default_formatter(value, row, column, data)}</span>`; 
-        } else if (typeof value === 'string') {
-            let color;
+	onload: function () {
+		return frappe.call({
+			method: "hrms.hr.report.monthly_attendance_sheet.monthly_attendance_sheet.get_attendance_years",
+			callback: function (r) {
+				var year_filter = frappe.query_report.get_filter("year");
+				year_filter.df.options = r.message;
+				year_filter.df.default = r.message.split("\n")[0];
+				year_filter.refresh();
+				year_filter.set_input(year_filter.df.default);
+			},
+		});
+	},
+	formatter: function (value, row, column, data, default_formatter) {
+		value = default_formatter(value, row, column, data);
+		const summarized_view = frappe.query_report.get_filter_value("summarized_view");
+		const group_by = frappe.query_report.get_filter_value("group_by");
 
-            switch (value) {
-                case "Present":
-                    color = "green";
-                    break;
-                case "Absent":
-                    color = "red";
-                    break;
-                case "Leave":
-                    color = "orange";
-                    break;
-                case "Work From Home":
-                    color = "purple";
-                    break;
-                case "Weekoff":
-                    color = "gray";
-                    break;
-                default:
-                    if (value && value.includes("Leave")) {
-                        color = "orange";
-                    } else if (value && value.includes("Work From Home")) {
-                        color = "purple";
-                    } else if (value && value.includes("Present")) {
-                        color = "green";
-                    } else {
-                        color = "gray"; 
-                    }
-            }
+		if (group_by && column.colIndex === 1) {
+			value = "<strong>" + value + "</strong>";
+		}
 
-            if (color) {
-                return `<span style='color:${color}!important'>${value}</span>`;
-            }
-        }
+		if (!summarized_view) {
+			if ((group_by && column.colIndex > 3) || (!group_by && column.colIndex > 2)) {
+				if (value == "P" || value == "WFH")
+					value = "<span style='color:green'>" + value + "</span>";
+				else if (value == "A") value = "<span style='color:red'>" + value + "</span>";
+				else if (value == "HD") value = "<span style='color:orange'>" + value + "</span>";
+				else if (value == "L") value = "<span style='color:#318AD8'>" + value + "</span>";
+			}
+		}
 
-        return default_formatter(value, row, column, data); 
-    }
+		return value;
+	},
 };
