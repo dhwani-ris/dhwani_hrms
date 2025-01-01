@@ -44,19 +44,19 @@ frappe.query_reports["Employee Calender"] = {
 				};
 			},
 		},
-		{
-			fieldname: "company",
-			label: __("Company"),
-			fieldtype: "Link",
-			options: "Company",
-			default: frappe.defaults.get_user_default("Company"),
-			reqd: 1,
-		},
+		// {
+		// 	fieldname: "company",
+		// 	label: __("Company"),
+		// 	fieldtype: "Link",
+		// 	options: "Company",
+		// 	default: frappe.defaults.get_user_default("Company"),
+		// 	reqd: 1,
+		// },
 		{
 			fieldname: "group_by",
 			label: __("Group By"),
 			fieldtype: "Select",
-			options: ["", "Branch", "Grade", "Department", "Designation"],
+			options: ["", "Department", "Designation"],
 		},
 		{
 			fieldname: "include_company_descendants",

@@ -28,7 +28,7 @@ day_abbr = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 
 def execute(filters: Filters | None = None) -> tuple:
     filters = frappe._dict(filters or {})
-
+    filters["company"] = "DhwaniRIS"
     if not (filters.month and filters.year):
         frappe.throw(_("Please select month and year."))
 
@@ -171,14 +171,14 @@ def get_columns(filters: Filters) -> list[dict]:
             ]
         )
     else:
-        columns.append(
-            {
-                "label": _("Shift"),
-                "fieldname": "shift",
-                "fieldtype": "Data",
-                "width": 120,
-            }
-        )
+        # columns.append(
+        #     {
+        #         "label": _("Shift"),
+        #         "fieldname": "shift",
+        #         "fieldtype": "Data",
+        #         "width": 120,
+        #     }
+        # )
         columns.extend(get_columns_for_days(filters))
 
     return columns
@@ -336,6 +336,7 @@ def get_employee_related_details(filters: Filters) -> tuple[dict, list]:
             Employee.holiday_list,
         )
         .where(Employee.company.isin(filters.companies))
+        .where(Employee.name.notin([1, 2]))
     )
 
     if filters.employee:
