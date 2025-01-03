@@ -9,4 +9,7 @@ frappe.listview_settings["Project"] = {
 			return [__(doc.status), frappe.utils.guess_colour(doc.status), "status,=," + doc.status];
 		}
 	},
+	refresh: function(listview) {
+		$("use.like-icon").hide();
+ }
 }
