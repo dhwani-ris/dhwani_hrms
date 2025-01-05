@@ -61,7 +61,6 @@ def execute(filters: Filters | None = None) -> tuple:
 
     message = get_message() if not filters.summarized_view else ""
     chart = get_chart_data(attendance_map, filters)
-    frappe.logger("utils").exception(chart)
     return columns, data, message, chart
 
 
