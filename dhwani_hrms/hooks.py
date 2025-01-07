@@ -150,6 +150,12 @@ doctype_list_js = {
 # 	}
 # }
 
+doc_events = {
+    "Timesheet": {
+        "on_update": "dhwani_hrms.overrides.timesheet.before_sumbit",
+    }
+}
+
 # Scheduled Tasks
 # ---------------
 

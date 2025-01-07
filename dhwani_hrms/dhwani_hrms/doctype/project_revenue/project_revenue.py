@@ -10,3 +10,8 @@ class ProjectRevenue(Document):
         project_doc = frappe.get_doc("Project", {"name": self.name})
         project_doc.custom_project_revenue = self.name
         project_doc.save(ignore_permissions=True)
+
+    def on_trash(self):
+        project_doc = frappe.get_doc("Project", {"name": self.name})
+        project_doc.custom_project_revenue = ""
+        project_doc.save(ignore_permissions=True)
