@@ -34,13 +34,13 @@ function validateTime(frm, cdt, cdn, fieldname, older_days, future_days) {
     const future_limit = moment().add(future_days, 'days');
 
     if (time.isBefore(past_limit)) {
-        frappe.msgprint(__("You cannot select a " + fieldname + " older than " + older_days + " weeks in the past"));
+        frappe.msgprint(__("You cannot select a " + fieldname + " older than " + older_days + " Days in the past"));
         frappe.model.set_value(cdt, cdn, fieldname, null);
         return; 
     }
 
     if (time.isAfter(future_limit)) {
-        frappe.msgprint(__("You cannot select a " + fieldname + " more than " + future_days + " weeks in the future."));
+        frappe.msgprint(__("You cannot select a " + fieldname + " more than " + future_days + " Days in the future."));
         frappe.model.set_value(cdt, cdn, fieldname, null);
         return;
     }
