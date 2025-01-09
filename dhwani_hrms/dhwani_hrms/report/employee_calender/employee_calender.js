@@ -35,14 +35,6 @@ frappe.query_reports["Employee Calender"] = {
 			label: __("Employee"),
 			fieldtype: "Link",
 			options: "Employee",
-			get_query: () => {
-				var company = frappe.query_report.get_filter_value("company");
-				return {
-					filters: {
-						company: company,
-					},
-				};
-			},
 		},
 		// {
 		// 	fieldname: "company",
