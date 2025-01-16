@@ -43,7 +43,11 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-doctype_js = {"Timesheet": "public/js/timesheet.js"}
+doctype_js = {
+    "Timesheet": "public/js/timesheet.js",
+    "Leave Application": "public/js/leave_type.js",
+}
+
 doctype_list_js = {
     "Employee": "public/js/employee_list.js",
     "Project": "public/js/project_list.js",
@@ -138,7 +142,7 @@ doctype_list_js = {
 # 	"ToDo": "custom_app.overrides.CustomToDo"
 # }
 
-# Document Events
+ #Document Events
 # ---------------
 # Hook on document methods and events
 
@@ -149,12 +153,6 @@ doctype_list_js = {
 # 		"on_trash": "method"
 # 	}
 # }
-
-doc_events = {
-    "Timesheet": {
-        "on_update": "dhwani_hrms.overrides.timesheet.before_sumbit",
-    }
-}
 
 # Scheduled Tasks
 # ---------------
