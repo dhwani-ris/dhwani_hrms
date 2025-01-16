@@ -1,0 +1,54 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"slZo2H-GqB\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Performance.</span>\",\"col\":12}},{\"id\":\"10vmnSyAeH\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Goal\",\"col\":3}},{\"id\":\"czwFahGXN6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Appraisal\",\"col\":3}},{\"id\":\"tkq6i4GtAa\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Performance Feedback\",\"col\":3}}]",
+ "creation": "2025-01-16 10:51:21.462032",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "star",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Performance.",
+ "links": [],
+ "modified": "2025-01-16 15:29:08.497458",
+ "modified_by": "Administrator",
+ "module": "Dhwani Hrms",
+ "name": "Performance.",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "Me",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 41.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Appraisal",
+   "link_to": "Appraisal",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Goal",
+   "link_to": "Goal",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Employee Performance Feedback",
+   "link_to": "Employee Performance Feedback",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Performance."
+}
