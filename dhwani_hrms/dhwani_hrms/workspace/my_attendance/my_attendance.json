@@ -1,0 +1,61 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"BT7SCB3v63\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">My Attendance</span>\",\"col\":12}},{\"id\":\"hPP1ZObYvV\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Attendance (Avg Hrs / Week)\",\"col\":4}},{\"id\":\"hCJFgnQMQt\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Checkin\",\"col\":3}},{\"id\":\"0Ll8yXWpKo\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Attendance Request\",\"col\":3}},{\"id\":\"7Hu8Q8nYy0\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"k0c6wbO1M7\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Employee Check-In\",\"col\":6}},{\"id\":\"_FdBC8gBjD\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Attendance List\",\"col\":6}}]",
+ "creation": "2025-01-15 15:08:58.313168",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "My Attendance",
+ "links": [],
+ "modified": "2025-01-17 17:57:55.947489",
+ "modified_by": "Administrator",
+ "module": "Dhwani Hrms",
+ "name": "My Attendance",
+ "number_cards": [
+  {
+   "label": "Attendance (Avg Hrs / Week)",
+   "number_card_name": "My Attendnce"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "Me",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Employee Checkin",
+   "label": "Employee Check-In",
+   "quick_list_filter": "[]"
+  },
+  {
+   "document_type": "Attendance",
+   "label": "Attendance List",
+   "quick_list_filter": "[]"
+  }
+ ],
+ "roles": [],
+ "sequence_id": 2.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employee Checkin",
+   "link_to": "Employee Checkin",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Attendance Request",
+   "link_to": "Attendance Request",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "My Attendance"
+}

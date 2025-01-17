@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Me",
  "links": [],
- "modified": "2025-01-17 14:20:54.002972",
+ "modified": "2025-01-17 15:52:56.758541",
  "modified_by": "Administrator",
  "module": "Dhwani Hrms",
  "name": "Me",
@@ -31,6 +31,13 @@
  "roles": [],
  "sequence_id": 1.0,
  "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employee Calander",
+   "link_to": "Employee Calender",
+   "type": "Report"
+  },
   {
    "color": "Grey",
    "doc_view": "List",
@@ -68,13 +75,6 @@
    "label": "Meal",
    "type": "URL",
    "url": "https://chat.whatsapp.com/KOsqSmRPhjwBU7NZWfn1jf"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Employee Calander",
-   "link_to": "Employee Calander",
-   "type": "Report"
   },
   {
    "color": "Grey",
