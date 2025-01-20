@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"NC0n5kVrwL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Me</span>\",\"col\":12}},{\"id\":\"GnTET0iyzJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Calander\",\"col\":3}},{\"id\":\"AwVMq4flQi\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Details\",\"col\":3}},{\"id\":\"Sx5nPqglUy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Work From Home Request\",\"col\":3}},{\"id\":\"0urSIJRT-1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Holiday List\",\"col\":3}},{\"id\":\"bgslOJ76Yn\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"fSOSPtq5te\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Leave Application\",\"col\":12}},{\"id\":\"_HGSOls4fO\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Jv3ZULJMFh\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Link</b></span>\",\"col\":12}},{\"id\":\"HYGUlMGsl_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"WhatsApp Group\",\"col\":3}},{\"id\":\"atKnKPMvJG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Meal\",\"col\":3}},{\"id\":\"xFV-XZ2TRm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Razorpay Portal\",\"col\":3}}]",
+ "content": "[{\"id\":\"NC0n5kVrwL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Me</span>\",\"col\":12}},{\"id\":\"GnTET0iyzJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Calander\",\"col\":3}},{\"id\":\"AwVMq4flQi\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Details\",\"col\":3}},{\"id\":\"Sx5nPqglUy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Work From Home Request\",\"col\":3}},{\"id\":\"0urSIJRT-1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Holiday List\",\"col\":3}},{\"id\":\"bgslOJ76Yn\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"fSOSPtq5te\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Leave Application\",\"col\":6}},{\"id\":\"NfmFc_36mF\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Work From Home Requests\",\"col\":6}},{\"id\":\"_HGSOls4fO\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"Jv3ZULJMFh\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Link</b></span>\",\"col\":12}},{\"id\":\"HYGUlMGsl_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"WhatsApp Group\",\"col\":3}},{\"id\":\"atKnKPMvJG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Meal\",\"col\":3}},{\"id\":\"xFV-XZ2TRm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Razorpay Portal\",\"col\":3}}]",
  "creation": "2025-01-15 15:08:00.869514",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Me",
  "links": [],
- "modified": "2025-01-17 15:52:56.758541",
+ "modified": "2025-01-20 18:08:18.330163",
  "modified_by": "Administrator",
  "module": "Dhwani Hrms",
  "name": "Me",
@@ -25,6 +25,11 @@
   {
    "document_type": "Leave Application",
    "label": "Leave Application",
+   "quick_list_filter": "[]"
+  },
+  {
+   "document_type": "Attendance Request",
+   "label": "Work From Home Requests",
    "quick_list_filter": "[]"
   }
  ],
