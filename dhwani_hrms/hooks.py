@@ -29,6 +29,7 @@ app_license = "mit"
 # app_include_js = "/assets/dhwani_hrms/js/dhwani_hrms.js"
 
 # include js, css files in header of web template
+app_include_css = "/assets/dhwani_hrms/css/custombutton.css"
 # web_include_css = "/assets/dhwani_hrms/css/dhwani_hrms.css"
 # web_include_js = "/assets/dhwani_hrms/js/dhwani_hrms.js"
 

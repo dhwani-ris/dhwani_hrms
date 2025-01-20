@@ -1,0 +1,15 @@
+.btn.btn-primary {
+    background-color: #811622;
+    color: var(--neutral);
+    --icon-stroke: currentColor;
+    --icon-fill-bg: #811622;
+    white-space: nowrap;
+}    
+.navbar{
+    background-color: #811622 !important;
+}
+.navbar-expand{
+    background-color: #811622 !important;
+}
+
+
