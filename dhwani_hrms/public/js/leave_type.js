@@ -26,7 +26,7 @@ frappe.ui.form.on("Leave Application", {
 
             // Clear the "from_date" field
             frm.set_value("from_date", null).then(() => {
-                frm.__skip_from_date_function = false; // Reset the flag after setting the value
+                frm.__skip_from_date_function = false; 
             });
         }
     },
