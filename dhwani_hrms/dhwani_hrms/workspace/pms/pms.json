@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "PMS",
  "links": [],
- "modified": "2025-01-17 11:15:54.674929",
+ "modified": "2025-01-20 12:27:31.753120",
  "modified_by": "Administrator",
  "module": "Dhwani Hrms",
  "name": "PMS",
@@ -22,7 +22,11 @@
  "parent_page": "",
  "public": 1,
  "quick_lists": [],
- "roles": [],
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
  "sequence_id": 44.0,
  "shortcuts": [],
  "title": "PMS"
