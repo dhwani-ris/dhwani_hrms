@@ -3,13 +3,9 @@
   {
    "chart_name": "My Leave Chart",
    "label": "Leave Chart"
-  },
-  {
-   "chart_name": "Holiday Chart",
-   "label": "Holiday Chart"
   }
  ],
- "content": "[{\"id\":\"_Jx7K1RYHs\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Leave</span>\",\"col\":12}},{\"id\":\"xXxv3brzpg\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"mNdZ1vk1TY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Leave Calendar\",\"col\":3}},{\"id\":\"Tr6s1LTePs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Leave Request\",\"col\":3}},{\"id\":\"iW_sGCoyQP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Compensatory Leave Request\",\"col\":3}},{\"id\":\"oFKsV8BVNV\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"IZJ12KI99U\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Holiday Chart\",\"col\":12}},{\"id\":\"sMiQ78-aQx\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Leave Chart\",\"col\":12}},{\"id\":\"sj71gIqiFK\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"c558h1ujV-\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Leave Reuest\",\"col\":6}},{\"id\":\"N_-EEG_2Ah\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Compensatory Leave Request\",\"col\":6}}]",
+ "content": "[{\"id\":\"_Jx7K1RYHs\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Leave</span>\",\"col\":12}},{\"id\":\"xXxv3brzpg\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"mNdZ1vk1TY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Leave Calendar\",\"col\":3}},{\"id\":\"Tr6s1LTePs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Leave Request\",\"col\":3}},{\"id\":\"iW_sGCoyQP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Compensatory Leave Request\",\"col\":4}},{\"id\":\"JHOsiLYJJd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Leave Policy\",\"col\":3}},{\"id\":\"oFKsV8BVNV\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sMiQ78-aQx\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Leave Chart\",\"col\":12}},{\"id\":\"sj71gIqiFK\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"c558h1ujV-\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Leave Reuest\",\"col\":6}},{\"id\":\"N_-EEG_2Ah\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Compensatory Leave Request\",\"col\":6}}]",
  "creation": "2025-01-15 16:42:41.343108",
  "custom_blocks": [],
  "docstatus": 0,
@@ -22,7 +18,7 @@
  "is_hidden": 0,
  "label": "Leave",
  "links": [],
- "modified": "2025-01-20 18:01:01.515821",
+ "modified": "2025-01-21 13:52:33.441720",
  "modified_by": "Administrator",
  "module": "Dhwani Hrms",
  "name": "Leave",
@@ -45,6 +41,13 @@
  "roles": [],
  "sequence_id": 3.0,
  "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Leave Policy",
+   "type": "URL",
+   "url": "https://bit.ly/40q7cK1"
+  },
   {
    "color": "Grey",
    "doc_view": "Calendar",

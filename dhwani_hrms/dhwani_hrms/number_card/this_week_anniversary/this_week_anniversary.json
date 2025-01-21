@@ -1,0 +1,22 @@
+{
+ "creation": "2025-01-21 13:19:17.211573",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "filters_json": "{\"date_range\":\"this_week\",\"event\":\"Work Anniversary\"}",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "This Week Anniversary",
+ "modified": "2025-01-21 13:19:17.211573",
+ "modified_by": "Administrator",
+ "module": "Dhwani Hrms",
+ "name": "This Week Anniversary",
+ "owner": "Administrator",
+ "report_field": "count",
+ "report_function": "Sum",
+ "report_name": "Employee Birthdays and Work Anniversary",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Report"
+}

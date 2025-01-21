@@ -11,12 +11,12 @@
  "idx": 0,
  "indicator_color": "",
  "is_hidden": 0,
- "label": "Insurance ",
+ "label": "Insurance",
  "links": [],
- "modified": "2025-01-20 18:01:01.663402",
+ "modified": "2025-01-21 13:37:11.218446",
  "modified_by": "Administrator",
  "module": "Dhwani Hrms",
- "name": "Insurance ",
+ "name": "Insurance",
  "number_cards": [],
  "owner": "Administrator",
  "parent_page": "Me",
@@ -29,5 +29,5 @@
  ],
  "sequence_id": 7.0,
  "shortcuts": [],
- "title": "Insurance "
+ "title": "Insurance"
 }
