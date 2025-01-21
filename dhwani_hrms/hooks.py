@@ -27,7 +27,9 @@ add_to_apps_screen = [
 # include js, css files in header of desk.html
 # app_include_css = "/assets/dhwani_hrms/css/dhwani_hrms.css"
 # app_include_js = "/assets/dhwani_hrms/js/dhwani_hrms.js"
-
+app_include_js = [
+    "/assets/dhwani_hrms/js/dhwani_hrms.js",
+]
 # include js, css files in header of web template
 app_include_css = "/assets/dhwani_hrms/css/custombutton.css"
 # web_include_css = "/assets/dhwani_hrms/css/dhwani_hrms.css"

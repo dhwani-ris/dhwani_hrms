@@ -5,10 +5,28 @@
     --icon-fill-bg: #811622;
     white-space: nowrap;
 }    
-/* .navbar{
+.navbar{
     background-color: #811622 !important;
 }
 .navbar-expand{
     background-color: #811622 !important;
 }
- */
+ .navbar .icon, .navbar .es-icon {
+    stroke: white !important; 
+    fill: white !important; 
+}
+
+.navbar .search-icon svg { /* Targets the SVG within the search icon */
+    stroke: black !important;  
+}
+
+/* OR if you're just using a background image or icon font: */
+.navbar .search-icon {  /* Targets the search icon container */
+    color: black !important; /* Sets text/icon color */
+    /* Or use background-image, filter, etc. if needed */
+}
+
+/* 
+.navbar .dropdown-help span { 
+    color: white !important; 
+} */
