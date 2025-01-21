@@ -11,15 +11,15 @@ app_license = "mit"
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "dhwani_hrms",
-# 		"logo": "/assets/dhwani_hrms/logo.png",
-# 		"title": "Dhwani Hrms",
-# 		"route": "/dhwani_hrms",
-# 		"has_permission": "dhwani_hrms.api.permission.has_app_permission"
-# 	}
-# ]
+add_to_apps_screen = [
+    {
+        "name": "dhwani_hrms",
+        # "logo": "/assets/dhwani_hrms/logo.png",
+        "title": "Dhwani Hrms",
+        "route": "/dhwani_hrms",
+        # "has_permission": "dhwani_hrms.api.permission.has_app_permission"
+    }
+]
 
 # Includes in <head>
 # ------------------
@@ -143,7 +143,7 @@ doctype_list_js = {
 # 	"ToDo": "custom_app.overrides.CustomToDo"
 # }
 
- #Document Events
+# Document Events
 # ---------------
 # Hook on document methods and events
 
