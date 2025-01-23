@@ -45,6 +45,28 @@ def execute(filters=None):
     birthday_data = []
     anniversary_data = []
 
+    columns = [
+        {
+            "fieldname": "employee_name",
+            "fieldtype": "Data",
+            "label": "Employee Name",
+            "hidden": 0,
+            "width": "150",
+        },
+        {"fieldname": "date", "fieldtype": "Date", "label": "Date", "width": "120"},
+        {"fieldname": "event", "fieldtype": "Data", "label": "Event", "width": "120"},
+        {
+            "fieldname": "count",
+            "fieldtype": "Int",
+            "label": "Count",
+            "hidden": 1,
+            "width": "120",
+        },
+    ]
+
+    if filters.get("event") == "Work Anniversary":
+        columns.insert(2, _("Years") + ":Int:80")  # Years column conditionally shown
+
     for employee in employees:
         if employee.date_of_birth:
             birth_date = employee.date_of_birth
@@ -54,7 +76,7 @@ def execute(filters=None):
                 birthday_data.append(
                     {
                         "employee_name": employee.employee_name,
-                        "date": birth_date,
+                        "date": birth_month_day,
                         "years": age,
                         "event": "Birthday",  # Add event type
                         "count": 1,
@@ -93,14 +115,6 @@ def execute(filters=None):
             anniversary_data
         )  # Add anniversary data if selected or no filter
 
-    columns = [
-        _("Employee Name") + ":Data:150",
-        _("Date") + ":Date:120",
-        _("Years") + ":Int:80",
-        _("Event") + ":Data:120",
-        _("Count") + ":Int:120",
-    ]
-
     chart_labels = [data["employee_name"] for data in all_data]
     chart_values = [data["years"] for data in all_data]  # Use 'years'
     chart_colors = [
@@ -116,4 +130,4 @@ def execute(filters=None):
         "colors": chart_colors,
     }
 
-    return columns, all_data, None, chart
+    return columns, all_data
