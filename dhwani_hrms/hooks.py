@@ -48,7 +48,7 @@ app_include_css = "/assets/dhwani_hrms/css/custombutton.css"
 # include js in doctype views
 doctype_js = {
     "Timesheet": "public/js/timesheet.js",
-    "Leave Application": "public/js/leave_type.js",
+    "Leave Application": "public/js/leave_application.js",
 }
 
 doctype_list_js = {

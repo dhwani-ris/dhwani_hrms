@@ -10,12 +10,11 @@ frappe.ui.form.on("Leave Application", {
                 }
                 frappe.msgprint(__("Please select a Leave Type before setting the From Date."));
             } else {
-                leaveRestriction(frm); // Execute your custom function
+                leaveRestriction(frm); 
             }
-            // Reset the flag after a short delay (optional, to allow retries)
             setTimeout(() => {
-                frm.__from_date_alert_shown = false; // Reset flag
-            }, 500); // Adjust delay as needed
+                frm.__from_date_alert_shown = false; 
+            }, 500); 
         }
     },
     leave_type: function(frm) {
@@ -35,19 +34,24 @@ function leaveRestriction(frm){
     if (frm.doc.leave_type) {
         frappe.db.get_value("Leave Type", {name: frm.doc.leave_type}, ["custom_apply_casual_leave_before_days","custom_days","custom_past_day_submition_not_allowed"])
             .then((value)=>{
-                if(value && value.message.custom_apply_casual_leave_before_days || value.message.custom_past_day_submition_not_allowed){
+                
+                if(value && (value.message.custom_apply_casual_leave_before_days || value.message.custom_past_day_submition_not_allowed)){
                     let days = value.message.custom_apply_casual_leave_before_days;
                     let past_day = value.message.custom_past_day_submition_not_allowed
                     validateTime(frm, 'from_date', value.message.custom_days, frm.doc.leave_type,past_day);
                 }
             });
         }
+    else{
+        frappe.throw(__("Please select a Leave Type before setting the From Date."));
+    }
     
 }
 function validateTime(frm, fieldname, custom_days, leave_type,past_day) {
     const selected_date = moment(frm.doc[fieldname]); // Parse selected date
     const today = moment().startOf('day'); // Get today's date
     const min_days = moment().add(custom_days-1, 'days'); // Minimum days before leave can be applied
+    
     if (past_day == 1) {
         if (selected_date.isBefore(today)) {
             if(frm.doc.from_date){
