@@ -6,7 +6,6 @@ from hrms.hr.doctype.leave_application.leave_application import get_leave_detail
 def execute(filters=None):
     columns = get_columns()
     user = frappe.session.user
-    user = "swati.yadav@dhwaniris.com"
     data = get_data(user, filters)
     chart = get_chart_data(data)
     return columns, data, None, chart
