@@ -37,7 +37,7 @@ def on_cancel(doc, method):
         "Employee",
         doc.employee,
         "custom_wfh_allowance_used",
-        doc.custom_wfh_allowance_used__this_month_ - doc.custom_total_applied_days,
+        doc.custom_total_applied_days,
     )
 
 
