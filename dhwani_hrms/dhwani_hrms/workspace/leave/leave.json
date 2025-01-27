@@ -3,9 +3,13 @@
   {
    "chart_name": "My Leave Chart",
    "label": "Leave Chart"
+  },
+  {
+   "chart_name": "My Leave Balance",
+   "label": "My Leave Balance"
   }
  ],
- "content": "[{\"id\":\"_Jx7K1RYHs\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Leave</span>\",\"col\":12}},{\"id\":\"xXxv3brzpg\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"mNdZ1vk1TY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Leave Calendar\",\"col\":3}},{\"id\":\"Tr6s1LTePs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Leave Request\",\"col\":3}},{\"id\":\"iW_sGCoyQP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Compensatory Leave Request\",\"col\":4}},{\"id\":\"JHOsiLYJJd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Leave Policy\",\"col\":3}},{\"id\":\"Qvq37IgFag\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Remaining Leaves\",\"col\":4}},{\"id\":\"oFKsV8BVNV\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sMiQ78-aQx\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Leave Chart\",\"col\":12}},{\"id\":\"sj71gIqiFK\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"c558h1ujV-\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Leave Reuest\",\"col\":6}},{\"id\":\"N_-EEG_2Ah\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Compensatory Leave Request\",\"col\":6}}]",
+ "content": "[{\"id\":\"_Jx7K1RYHs\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Leave</span>\",\"col\":12}},{\"id\":\"xXxv3brzpg\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"mNdZ1vk1TY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Leave Calendar\",\"col\":3}},{\"id\":\"Tr6s1LTePs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Leave Request\",\"col\":3}},{\"id\":\"iW_sGCoyQP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Compensatory Leave Request\",\"col\":4}},{\"id\":\"JHOsiLYJJd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Leave Policy\",\"col\":3}},{\"id\":\"pERvU8anuz\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sVhQWxKHdu\",\"type\":\"chart\",\"data\":{\"chart_name\":\"My Leave Balance\",\"col\":12}},{\"id\":\"oFKsV8BVNV\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sMiQ78-aQx\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Leave Chart\",\"col\":12}},{\"id\":\"sj71gIqiFK\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"c558h1ujV-\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Leave Reuest\",\"col\":6}},{\"id\":\"N_-EEG_2Ah\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Compensatory Leave Request\",\"col\":6}}]",
  "creation": "2025-01-15 16:42:41.343108",
  "custom_blocks": [],
  "docstatus": 0,
@@ -18,16 +22,11 @@
  "is_hidden": 0,
  "label": "Leave",
  "links": [],
- "modified": "2025-01-27 12:40:16.619372",
+ "modified": "2025-01-27 16:00:52.661057",
  "modified_by": "Administrator",
  "module": "Dhwani Hrms",
  "name": "Leave",
- "number_cards": [
-  {
-   "label": "Total Remaining Leaves",
-   "number_card_name": "Total Remaining Leaves"
-  }
- ],
+ "number_cards": [],
  "owner": "Administrator",
  "parent_page": "Me",
  "public": 1,
