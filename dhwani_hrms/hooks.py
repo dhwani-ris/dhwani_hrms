@@ -51,6 +51,7 @@ doctype_js = {
     "Leave Application": "public/js/leave_application.js",
     "Attendance Request": "public/js/attendance_request.js",
     "Employee": "public/js/employee.js",
+    "Project": "public/js/project.js",
 }
 
 doctype_list_js = {
