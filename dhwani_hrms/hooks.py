@@ -49,6 +49,8 @@ app_include_css = "/assets/dhwani_hrms/css/custombutton.css"
 doctype_js = {
     "Timesheet": "public/js/timesheet.js",
     "Leave Application": "public/js/leave_application.js",
+    "Attendance Request": "public/js/attendance_request.js",
+    "Employee": "public/js/employee.js",
 }
 
 doctype_list_js = {
@@ -149,13 +151,13 @@ doctype_list_js = {
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+    "Attendance Request": {
+        "on_cancel": "dhwani_hrms.dhwani_hrms.doc_events.attendance_request.on_cancel",
+        "on_submit": "dhwani_hrms.dhwani_hrms.doc_events.attendance_request.on_submit",
+        "validate": "dhwani_hrms.dhwani_hrms.doc_events.attendance_request.validate",
+    }
+}
 
 # Scheduled Tasks
 # ---------------
