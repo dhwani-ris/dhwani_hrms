@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Finances",
  "links": [],
- "modified": "2025-01-20 18:01:01.690709",
+ "modified": "2025-01-27 13:02:41.355173",
  "modified_by": "Administrator",
  "module": "Dhwani Hrms",
  "name": "Finances",
@@ -27,7 +27,7 @@
    "role": "System Manager"
   }
  ],
- "sequence_id": 8.0,
+ "sequence_id": 13.0,
  "shortcuts": [],
  "title": "Finances"
 }

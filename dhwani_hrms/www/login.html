@@ -4,9 +4,55 @@
 {% if not disable_user_pass_login or (ldap_settings and ldap_settings.enabled) %}
 
 
+<div class="page-card-body">
+	<div class="form-group">
+		<label class="form-label sr-only" for="login_email">{{ login_label or _("Email")}}</label>
+		<div class="email-field">
+			<input type="text" id="login_email" class="form-control"
+				placeholder="{% if login_name_placeholder %}{{ login_name_placeholder  }}{% else %}{{ _('jane@example.com') }}{% endif %}"
+				required autofocus autocomplete="username">
 
+			<svg class="field-icon email-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+				<use class="es-lock" href="#es-line-email"></use>
+			</svg>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="form-label sr-only" for="login_password">{{ _("Password") }}</label>
+		<div class="password-field">
+			<input type="password" id="login_password" class="form-control" placeholder="•••••"
+				autocomplete="current-password" required>
+
+			<svg class="field-icon password-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+					<use class="es-lock" href="#es-line-lock"></use>
+			</svg>
+			<span toggle="#login_password" class="toggle-password text-muted">{{ _('Show') }}</span>
+		</div>
+	</div>
+
+	<p class="forgot-password-message">
+		<a href="#forgot">{{ _("Forgot Password?") }}</a>
+	</p>
+</div>
 {% endif %}
-
+<div class="page-card-actions">
+	{% if not disable_user_pass_login %}
+	<button class="btn btn-sm btn-primary btn-block btn-login" type="submit">
+		{{ _("Login") }}</button>
+	{% endif %}
+	{% if ldap_settings and ldap_settings.enabled %}
+	<button class="btn btn-sm btn-default btn-block btn-login btn-ldap-login">
+		{{ _("Login with LDAP") }}</button>
+	{% endif %}
+	<!-- <div class="powered-by-section text-center mt-3">
+		<p class="powered-by-text">Powered by <img src="./Dhwani_Logo.png" alt="Company Logo"></p>
+	</div> -->
+	
+	
+</div>
 
 {% endmacro %}
 
@@ -15,49 +61,45 @@
 <style>
     body {
         background-image: url('./login_bg.jpg');
-        background-size: cover; /* Ensures the image covers the entire viewport */
-		background-position: center; /* Centers the image */
-		background-repeat: no-repeat; /* Prevents tiling */
-	}
-	body::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-		z-index: 1; /* Place the overlay above the background */
-	}	
-   .for-login .page-card-head h4 {
-        color: #333; 
-    }	
+        background-size: auto 100%; /* Adjust height to fit and width auto-scales */
+    	background-position: left top; /* Align it to the top-left corner */
+        background-repeat: no-repeat;
+		background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .for-login .login-content {
+		position: absolute; /* Enables precise positioning */
+		top: 48px; /* Adjust top position as needed */
+		right: 1px; /* Aligns the element to the right */
+		background-color: rgba(255, 255, 255, 0.9);
+		padding: 20px;
+		border-radius: 8px;
+		/*box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);*/
+		margin-right: 24px;
+		border:none;
+}
+
+    .for-login .page-card-head {
+        /* Remove background settings from here as it's now on the login-content */
+        padding: 15px;
+    }
+
+    .for-login .page-card-head h4 {
+        color: #333; /* Or any color that works with your design */
+    }
+	
 	.custom-color {
-    	color: black;
+    	color: #501754;
 		margin-top: 10px;
-    	font-size: 20px;
+    	margin-bottom: 38px;
 	}
 	.app-logo {
-		width: 135px; /* Set the width */
-		max-height: 60px !important; /* Maintain aspect ratio */
-		margin-top: -160px;
+    width: 158px; /* Set the width */
+	max-height: 72px !important; /* Maintain aspect ratio */
 	}
-	.custom-width {
-		position: relative; /* Allows z-index to work */
-		height: 205px;
-		width: 410px;
-		background-color: white; /* Explicit white background */
-		margin-top: 50px !important; /* Adjust spacing */
-		z-index: 2; /* Ensures this element is above the overlay */
-	}
-	.login-button-wrapper{
-		margin-top: -70px;
-	}
-	.login-button-wrapper a {
-        margin-top: 55px;
-		border: 1px solid #d0cfce !important;
-		background-color: white !important;
-		height: 35px;
+	.custom-width{
+   		height: 687px;
+		width: 750px;
 	}
 </style>
 {% endblock %}
@@ -96,7 +138,7 @@
 					</form>
 					<div class="social-logins text-center">
 						{% if not disable_user_pass_login or (ldap_settings and ldap_settings.enabled) %}
-						
+						<p class="text-muted login-divider">{{ _("or") }}</p>
 						{% endif %}
 						<div class="social-login-buttons">
 							{% for provider in provider_logins %}

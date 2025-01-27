@@ -1,16 +1,16 @@
 .btn.btn-primary {
-    background-color: #811622;
+    background-color: #76618b;
     color: var(--neutral);
     --icon-stroke: currentColor;
-    --icon-fill-bg: #811622;
+    --icon-fill-bg: #76618b;
     white-space: nowrap;
     color: antiquewhite;
 }    
 .navbar{
-    background-color: #811622 !important;
+    background-color: #76618b !important;
 }
 .navbar-expand{
-    background-color: #811622 !important;
+    background-color: #76618b !important;
 }
  .navbar .icon, .navbar .es-icon {
     stroke: white !important; 
@@ -29,7 +29,128 @@
     /* Or use background-image, filter, etc. if needed */
 }
 
-/* 
-.navbar .dropdown-help span { 
-    color: white !important; 
-} */
+.layout-main-section{
+    background-color: #f3f4f7 !important;
+}
+.editable-form{
+    background-color: #f3f4f7 !important;
+}
+
+#page-Leave\ Application {
+    background-color: #f3f4f7 !important; /* Apply background color */
+}
+
+.widget-head {
+    height: 49px;
+}
+
+.widget.shortcut-widget-box {
+    cursor: pointer;
+    padding: 2px 7px;
+    align-items: flex-start;
+    min-height: 55px;
+    border-radius: 0;
+    transition: all 0.6s ease;
+}
+
+.spacer{
+    background-color: #f3f4f7 !important;
+}
+.widget.shortcut-widget-box:hover {
+    transform: scale(1.05); /* Slight scale-up */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+.content .page-container{
+    background-color: #f3f4f7;
+}
+/*.frappe-list{
+    background-color: #ffff !important;
+}*/
+.list-row-container{
+    background-color: #ffff;
+}
+/* Target each row with class list-row inside frappe-list */
+.frappe-list .list-row {
+    background-color: white; /* Default background color */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  }
+  /* Apply hover effect */
+  .frappe-list .list-row:hover {
+    background-color: #f3f4f7; /* Hover background color */
+    transform: scale(1.02); /* Slight scale-up for hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  input[type="text"] {
+    height: 33px; /* Set the desired height */
+    padding: 0 10px; /* Optional: Add some horizontal padding */
+    /*box-sizing: border-box; /* Ensure padding doesn't affect height */
+    font-size: 14px; /* Adjust font size to match the height */
+    background-color: #f3f4f7;
+
+   /* border: 1px solid #ccc;*/
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  input:hover {
+    border-color: #76618b;
+    box-shadow: 0 0 8px rgba(118, 97, 139, 0.6);
+    outline: none;
+  }
+  
+  .like-disabled-input {
+    height: 33px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #f3f4f7;
+   /* border: 1px solid #ccc;*/
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    user-select: none; /* Prevent text selection */
+    cursor: not-allowed; /* Optional: Show a 'disabled' cursor */
+  }
+  
+  .like-disabled-input:hover {
+    border-color: #76618b;
+    box-shadow: 0 0 8px rgba(118, 97, 139, 0.6);
+  }
+  
+
+  select {
+    height: 33px; /* Match the height of input */
+    padding: 0 10px; /* Adjust padding for the select element */
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #f3f4f7;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  select:hover {
+    border-color: #76618b;
+    box-shadow: 0 0 8px rgba(118, 97, 139, 0.6);
+    outline: none;
+  }
+
+  option {
+    font-size: 14px; /* Match font size */
+    background-color: #f3f4f7;
+    color: #000; /* Text color */
+  }
+
+  option:hover {
+    background-color: #e5e5e5; /* Add a hover effect */
+  }
+
+  .help-box .small .text-muted{
+    height: 33px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #f3f4f7;
+   /* border: 1px solid #ccc;*/
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .help-box .small .text-muted:hover{
+    border-color: #76618b;
+    box-shadow: 0 0 8px rgba(118, 97, 139, 0.6);
+  }

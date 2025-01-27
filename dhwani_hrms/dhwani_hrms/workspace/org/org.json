@@ -33,7 +33,7 @@
    "type": "Link"
   }
  ],
- "modified": "2025-01-20 18:01:01.865975",
+ "modified": "2025-01-27 13:02:46.519851",
  "modified_by": "Administrator",
  "module": "Dhwani Hrms",
  "name": "Org",
@@ -43,7 +43,7 @@
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 13.0,
+ "sequence_id": 34.0,
  "shortcuts": [],
  "title": "Org"
 }
