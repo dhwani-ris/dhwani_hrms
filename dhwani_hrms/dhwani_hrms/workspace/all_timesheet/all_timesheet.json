@@ -5,7 +5,7 @@
    "label": "Department wise Timesheet Hours"
   }
  ],
- "content": "[{\"id\":\"AOmS2a2vNc\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">All Timesheet</span>\",\"col\":12}},{\"id\":\"CTAy9W3VnG\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"pbfkCsr-lP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Timesheet\",\"col\":3}},{\"id\":\"aLRKpD0HbL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rejected Timesheet\",\"col\":3}},{\"id\":\"ehqn1hXcaW\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Project\",\"col\":3}},{\"id\":\"sqzaIxEfz-\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"bdTWMM68UV\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"TImesheet List\",\"col\":5}},{\"id\":\"_HUkU4WqHX\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Project List\",\"col\":7}},{\"id\":\"hXjxxzqUu3\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Department wise Timesheet Hours\",\"col\":12}}]",
+ "content": "[{\"id\":\"AOmS2a2vNc\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">All Timesheet</span>\",\"col\":12}},{\"id\":\"pbfkCsr-lP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Timesheet\",\"col\":3}},{\"id\":\"aLRKpD0HbL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rejected Timesheet\",\"col\":3}},{\"id\":\"ehqn1hXcaW\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Project\",\"col\":3}},{\"id\":\"bdTWMM68UV\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"TImesheet List\",\"col\":5}},{\"id\":\"_HUkU4WqHX\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Project List\",\"col\":7}},{\"id\":\"hXjxxzqUu3\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Department wise Timesheet Hours\",\"col\":12}}]",
  "creation": "2025-01-15 16:56:18.261964",
  "custom_blocks": [],
  "docstatus": 0,
@@ -18,7 +18,7 @@
  "is_hidden": 0,
  "label": "All Timesheet",
  "links": [],
- "modified": "2025-01-21 13:37:47.342543",
+ "modified": "2025-01-24 23:55:31.153147",
  "modified_by": "Administrator",
  "module": "Dhwani Hrms",
  "name": "All Timesheet",
