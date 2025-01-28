@@ -1,6 +1,6 @@
 frappe.ui.form.on("Project", {
     refresh(frm) {
-        const read_only_roles = ["Administrator", "HR Manager", "Project Manager"];
+        const read_only_roles = ["Administrator", "HR Manager", "Projects Manager"];
         const current_user_roles = frappe.user_roles;
 
         const is_read_only = !read_only_roles.some(role => current_user_roles.includes(role));
