@@ -18,18 +18,115 @@
 }
 
 .navbar .search-icon svg {
-    stroke: white !important;  
+    stroke: black !important;  
     fill: black;
     
+}
+
+navbar-breadcrumbs a {
+  margin-right: 10px;
 }
 
 /* OR if you're just using a background image or icon font: */
 .navbar .search-icon {  /* Targets the search icon container */
     color: black !important; /* Sets text/icon color */
-    /* Or use background-image, filter, etc. if needed */
+}
+body.light-theme {
+  --background-color: #f3f4f7;
+  --input-height: 33px;
+  --input-font-size: 14px;
+  --hover-border-color: #76618b;
+  --hover-box-shadow: 0 0 8px rgba(118, 97, 139, 0.6);
+  --text-muted-height:33px; /* new added */
+  --widget-head-height:49px; /* new added */
+  --min-widget-height:55px;/* new added */
+
+}
+body.light-theme .layout-main-section{
+    background-color: #f3f4f7 !important;
+}
+body.light-theme .editable-form{
+    background-color: #f3f4f7 !important;
 }
 
-/* 
-.navbar .dropdown-help span { 
-    color: white !important; 
-} */
+
+/* Existing styles modified to use CSS variables */
+body.light-theme #page-Leave\ Application {
+  background-color: var(--background-color) !important; 
+}
+
+body.light-theme .widget-head {
+  height: var(--widget-head-height); /* new modified */
+}
+
+body.light-theme .widget.shortcut-widget-box {
+  cursor: pointer;
+  padding: 2px 7px;
+  align-items: flex-start;
+  min-height: var(--min-widget-height); /* new modified */
+  border-radius: 0;
+  transition: all 0.6s ease;
+}
+
+body.light-theme .spacer{
+  background-color: var(--background-color) !important;
+}
+
+body.light-theme .content .page-container{
+  background-color: var(--background-color);
+}
+
+body.light-theme .list-row-container{
+  background-color: #ffff;
+}
+
+body.light-theme .frappe-list .list-row {
+  background-color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+body.light-theme .frappe-list .list-row:hover {
+  background-color: var(--background-color);
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+body.light-theme input[type="text"] {
+  height: var(--input-height);
+  padding: 0 10px;
+  font-size: var(--input-font-size);
+  background-color: var(--background-color);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+body.light-theme input:hover {
+  border-color: var(--hover-border-color);
+  box-shadow: var(--hover-box-shadow);
+  outline: none;
+}
+
+/* ... (similarly for select, option, .like-disabled-input,  and .help-box .small .text-muted) */
+body.light-theme .help-box .small .text-muted{
+  height: var(--text-muted-height); /* new modified */
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-size: var(--input-font-size);
+  background-color: var(--background-color);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.light-theme  .help-box .small .text-muted:hover{
+  border-color: var(--hover-border-color);
+  box-shadow: var(--hover-box-shadow);
+}
+
+
+#navbar-breadcrumbs{
+  --text-color:white;
+}
+
+body.light-theme  li.disabled a {
+  color: white !important;
+}
+
+
