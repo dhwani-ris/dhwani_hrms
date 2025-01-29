@@ -96,11 +96,11 @@ def get_chart_data(data):
         "data": {
             "labels": labels,
             "datasets": [
-                {"name": "Leaves Taken", "values": leave_taken},
+                # {"name": "Leaves Taken", "values": leave_taken},
                 {"name": "Remaining Leaves", "values": remaining_leaves},
-                {"name": "Total Allocated", "values": total_allocated},
+                # {"name": "Total Allocated", "values": total_allocated},
             ],
         },
-        "type": "bar",  # or 'line', 'pie', etc. as needed
+        "type": "donut",  # or 'line', 'pie', etc. as needed
         "height": 300,  # Adjust height as desired
     }
