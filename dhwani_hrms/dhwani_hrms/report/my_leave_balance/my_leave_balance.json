@@ -1,5 +1,5 @@
 {
- "add_total_row": 0,
+ "add_total_row": 1,
  "columns": [],
  "creation": "2025-01-27 11:34:03.391620",
  "disabled": 0,
@@ -9,7 +9,7 @@
  "idx": 0,
  "is_standard": "Yes",
  "letterhead": null,
- "modified": "2025-01-29 15:23:53.127157",
+ "modified": "2025-01-29 15:44:54.727847",
  "modified_by": "Administrator",
  "module": "Dhwani Hrms",
  "name": "My Leave Balance",
