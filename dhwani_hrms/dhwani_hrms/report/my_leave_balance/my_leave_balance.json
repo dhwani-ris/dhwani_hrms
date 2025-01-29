@@ -9,7 +9,7 @@
  "idx": 0,
  "is_standard": "Yes",
  "letterhead": null,
- "modified": "2025-01-27 11:34:03.391620",
+ "modified": "2025-01-29 15:23:53.127157",
  "modified_by": "Administrator",
  "module": "Dhwani Hrms",
  "name": "My Leave Balance",
@@ -20,19 +20,10 @@
  "report_type": "Script Report",
  "roles": [
   {
-   "role": "HR Manager"
-  },
-  {
-   "role": "Leave Approver"
-  },
-  {
-   "role": "HR User"
-  },
-  {
    "role": "Employee"
   },
   {
-   "role": "Employee Self Service"
+   "role": "All"
   }
  ],
  "timeout": 0
