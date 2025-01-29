@@ -1,6 +1,6 @@
 frappe.listview_settings["Employee"] = {
-	hide_name_column: true, // this part
-	// hide_name_filter: true,
+	hide_name_column: true,
+	hide_name_filter: true,
 	add_fields: ["status", "branch", "department", "designation", "image"],
 	filters: [["status", "=", "Active"]],
 	get_indicator: function (doc) {
