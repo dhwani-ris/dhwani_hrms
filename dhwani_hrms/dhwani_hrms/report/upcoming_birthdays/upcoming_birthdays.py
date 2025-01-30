@@ -3,7 +3,7 @@ from frappe.utils import today, add_days, getdate, formatdate  # type: ignore
 
 def execute(filters):
     today_date = getdate(today())
-
+    current_month = today_date.month
     # Get filter values for from_date and to_date
     from_date = filters.get("from_date")
     to_date = filters.get("to_date")
@@ -51,15 +51,16 @@ def execute(filters):
                 "employee_name": emp["employee_name"],
                 "day": birthday_this_year.strftime("%A"),  # Get weekday name
                 "date": birthday_this_year,  # Display in "YYYY-MM-DD" format
+                "month": birthday_this_year.month,
                 "count": 1,
             })
-
+    filtered_data.sort(key=lambda x: (x["month"] != current_month, x["date"]))
     # Define columns
     columns = [
-        {"fieldname": "employee_name", "label": "Employee Name", "fieldtype": "Data", "width": 200},
-        {"fieldname": "day", "label": "Day", "fieldtype": "Data", "width": 120},
-        {"fieldname": "date", "label": "Date (This Year)", "fieldtype": "Date", "width": 120},
-        {"fieldname": "count","fieldtype": "Int","label": "Count","hidden": 1,"width": "120"},
+        {"fieldname": "employee_name", "label": "Employee Name", "fieldtype": "Data", "width": 220},
+        {"fieldname": "day", "label": "Day", "fieldtype": "Data", "width": 220},
+        {"fieldname": "date", "label": "Date", "fieldtype": "Date", "width": 220},
+        {"fieldname": "count","fieldtype": "Int","label": "Count","hidden": 1,"width": "220"},
     ]
 
     return columns, filtered_data
