@@ -51,6 +51,7 @@ def execute(filters):
                 "employee_name": emp["employee_name"],
                 "day": birthday_this_year.strftime("%A"),  # Get weekday name
                 "date": birthday_this_year,  # Display in "YYYY-MM-DD" format
+                "count": 1,
             })
 
     # Define columns
@@ -58,6 +59,7 @@ def execute(filters):
         {"fieldname": "employee_name", "label": "Employee Name", "fieldtype": "Data", "width": 200},
         {"fieldname": "day", "label": "Day", "fieldtype": "Data", "width": 120},
         {"fieldname": "date", "label": "Date (This Year)", "fieldtype": "Date", "width": 120},
+        {"fieldname": "count","fieldtype": "Int","label": "Count","hidden": 1,"width": "120"},
     ]
 
     return columns, filtered_data
