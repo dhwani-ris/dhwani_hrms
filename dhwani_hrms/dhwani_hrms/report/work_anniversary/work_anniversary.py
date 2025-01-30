@@ -62,7 +62,7 @@ def execute(filters):
     columns = [
         {"fieldname": "employee_name", "label": "Employee Name", "fieldtype": "Data", "width": 220},
         {"fieldname": "day", "label": "Day", "fieldtype": "Data", "width": 220},
-        {"fieldname": "date", "label": "Anniversary Date (This Year)", "fieldtype": "Date", "width": 220},
+        {"fieldname": "date", "label": "Anniversary Date", "fieldtype": "Date", "width": 220},
         {"fieldname": "count","fieldtype": "Int","label": "Count","hidden": 1,"width": "120"},
     ]
 
