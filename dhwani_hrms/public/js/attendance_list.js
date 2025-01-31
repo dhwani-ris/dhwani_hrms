@@ -1,6 +1,7 @@
 frappe.listview_settings["Attendance"] = {
 	hide_name_column: true,
-	add_fields: ["status", "attendance_date"],
+	hide_name_filter: true,
+	add_fields: ["status", "attendance_date","in_time", "out_time"],
 
 	get_indicator: function (doc) {
 		if (["Present", "Work From Home"].includes(doc.status)) {
@@ -190,4 +191,21 @@ frappe.listview_settings["Attendance"] = {
 				});
 		}
 	},
+	formatters: {
+        in_time: function (val, doc) {
+            if (!val) return `<span class="text-danger">--</span>`;
+            let time = moment(val).format("HH:mm:ss");
+            return parseInt(time.split(":")[0]) >= 10
+                ? `<span class="text-danger">${time}</span>`  // After 10 AM → RED
+                : `<span class="text-success">${time}</span>`; // Before 10 AM → GREEN
+        },
+        out_time: function (val, doc) {
+            if (!val) return `<span class="text-danger">--</span>`; // If out_time is missing, return "Missing"
+            
+            let time = moment(val).format("HH:mm:ss");            
+            return parseInt(time.split(":")[0]) < 19
+                ? `<span class="text-danger">${time}</span>`  // Before 7 PM → RED
+                : `<span class="text-success">${time}</span>`; // After 7 PM → GREEN
+        }
+    },
 };

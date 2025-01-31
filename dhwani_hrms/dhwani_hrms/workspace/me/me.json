@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"NC0n5kVrwL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Me</span>\",\"col\":12}},{\"id\":\"GnTET0iyzJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Calander\",\"col\":3}},{\"id\":\"AwVMq4flQi\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"My Teams\",\"col\":3}},{\"id\":\"0urSIJRT-1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Holiday List\",\"col\":3}},{\"id\":\"LkTfjZVa5t\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Birthdays and Work Anniversary</b></span>\",\"col\":12}},{\"id\":\"37HLrWH6t7\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"On Leave Today\",\"col\":4}},{\"id\":\"kKy8IMVJ3C\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"This Week Birthdays\",\"col\":4}},{\"id\":\"-BIs7eHCAS\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"This Week Work Anniversary\",\"col\":4}},{\"id\":\"k3ATVFyutX\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Leave and WFH</b></span>\",\"col\":12}},{\"id\":\"fSOSPtq5te\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Leave Application\",\"col\":6}},{\"id\":\"NfmFc_36mF\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Work From Home Requests\",\"col\":6}},{\"id\":\"Jv3ZULJMFh\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Links</b></span>\",\"col\":12}},{\"id\":\"HYGUlMGsl_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"WhatsApp Group\",\"col\":3}},{\"id\":\"atKnKPMvJG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Meal\",\"col\":3}},{\"id\":\"xFV-XZ2TRm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Razorpay Portal\",\"col\":3}}]",
+ "content": "[{\"id\":\"NC0n5kVrwL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Me</span>\",\"col\":12}},{\"id\":\"GnTET0iyzJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Calendar\",\"col\":3}},{\"id\":\"AwVMq4flQi\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"My Teams\",\"col\":3}},{\"id\":\"0urSIJRT-1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Holiday List\",\"col\":3}},{\"id\":\"LkTfjZVa5t\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Birthdays and Work Anniversary</b></span>\",\"col\":12}},{\"id\":\"37HLrWH6t7\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"On Leave Today\",\"col\":4}},{\"id\":\"kKy8IMVJ3C\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Upcoming Birthdays\",\"col\":4}},{\"id\":\"-BIs7eHCAS\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Upcoming Work Anniversary\",\"col\":4}},{\"id\":\"k3ATVFyutX\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Leave and WFH</b></span>\",\"col\":12}},{\"id\":\"fSOSPtq5te\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Leave Application\",\"col\":6}},{\"id\":\"NfmFc_36mF\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Work From Home Requests\",\"col\":6}},{\"id\":\"Jv3ZULJMFh\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Quick Links</b></span>\",\"col\":12}},{\"id\":\"HYGUlMGsl_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"WhatsApp Group\",\"col\":3}},{\"id\":\"atKnKPMvJG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Meal\",\"col\":3}},{\"id\":\"xFV-XZ2TRm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Razorpay Portal\",\"col\":3}}]",
  "creation": "2025-01-15 15:08:00.869514",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,22 +13,22 @@
  "is_hidden": 0,
  "label": "Me",
  "links": [],
- "modified": "2025-01-30 15:48:44.670236",
+ "modified": "2025-01-31 11:19:49.591645",
  "modified_by": "Administrator",
  "module": "Dhwani Hrms",
  "name": "Me",
  "number_cards": [
   {
-   "label": "This Week Birthdays",
-   "number_card_name": "This Week Birthdays"
+   "label": "Upcoming Birthdays",
+   "number_card_name": "Upcoming Birthdays"
+  },
+  {
+   "label": "Upcoming Work Anniversary",
+   "number_card_name": "Work Anniversary"
   },
   {
    "label": "On Leave Today",
    "number_card_name": "On Leave Today"
-  },
-  {
-   "label": "This Week Work Anniversary",
-   "number_card_name": "This Week Anniversary"
   }
  ],
  "owner": "Administrator",
@@ -52,8 +52,8 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Employee Calander",
-   "link_to": "Employee Calander",
+   "label": "Employee Calendar",
+   "link_to": "Employee Calender",
    "type": "Report"
   },
   {
