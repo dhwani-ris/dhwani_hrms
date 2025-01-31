@@ -1,18 +1,25 @@
 import frappe
+from datetime import datetime, timedelta
 
-#dhwani_hrms.dhwani_hrms.custom_number_cards.Upcoming_birthday_card.get_upcoming_birthday_report
+
+# dhwani_hrms.dhwani_hrms.custom_number_cards.upcoming_birthdays_card.get_upcoming_birthday_report
 @frappe.whitelist(allow_guest=True)
 def get_upcoming_birthday_report():
     report = frappe.get_doc("Report", "Upcoming Birthdays")
+    to_date = (datetime.now() + timedelta(days=30)).replace(
+        day=1, hour=0, minute=0, second=0, microsecond=0
+    ) - timedelta(days=1)
+    to_date = to_date.strftime("%Y-%m-%d")
+
     from_date = frappe.utils.nowdate()
-    to_date = frappe.utils.get_last_day(from_date)  # Get last date of the current month
-    
+    to_date = frappe.utils.get_last_day(frappe.utils.add_days(from_date, 30))
+
     columns, data = report.get_data(
         filters={"from_date": from_date, "to_date": to_date}, as_dict=True
     )
-    
-    values = data[-1].get("count") if data else 0
-    
+
+    values = sum(row["count"] for row in data)
+
     return {
         "value": values,
         "fieldtype": "Int",
