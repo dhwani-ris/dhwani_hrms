@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"BT7SCB3v63\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">My Attendance</span>\",\"col\":12}},{\"id\":\"hPP1ZObYvV\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Attendance (Avg Hrs / Week)\",\"col\":4}},{\"id\":\"WyE9VBvM_l\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"FwkRUTfUju\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Attendance Request\",\"col\":3}},{\"id\":\"BXARHR-TR6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Checkin\",\"col\":3}},{\"id\":\"I7baqZPgJ8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Work From Home Request\",\"col\":3}},{\"id\":\"UWEw_CBTTG\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"k0c6wbO1M7\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Employee Check-In\",\"col\":6}},{\"id\":\"_FdBC8gBjD\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Attendance List\",\"col\":6}}]",
+ "content": "[{\"id\":\"BT7SCB3v63\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">My Attendance</span>\",\"col\":12}},{\"id\":\"hPP1ZObYvV\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Attendance (Avg Hrs / Week)\",\"col\":4}},{\"id\":\"WyE9VBvM_l\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"BXARHR-TR6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Checkin\",\"col\":3}},{\"id\":\"UWEw_CBTTG\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"k0c6wbO1M7\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Employee Check-In\",\"col\":6}},{\"id\":\"_FdBC8gBjD\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Attendance List\",\"col\":6}}]",
  "creation": "2025-01-15 15:08:58.313168",
  "custom_blocks": [],
  "docstatus": 0,
@@ -12,7 +12,7 @@
  "is_hidden": 0,
  "label": "My Attendance",
  "links": [],
- "modified": "2025-01-28 18:17:40.585372",
+ "modified": "2025-02-03 15:42:40.106120",
  "modified_by": "Administrator",
  "module": "Dhwani Hrms",
  "name": "My Attendance",
@@ -38,29 +38,13 @@
   }
  ],
  "roles": [],
- "sequence_id": 2.0,
+ "sequence_id": 3.0,
  "shortcuts": [
   {
    "color": "Grey",
    "doc_view": "List",
    "label": "Employee Checkin",
    "link_to": "Employee Checkin",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Work From Home Request",
-   "link_to": "Attendance Request",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Attendance Request",
-   "link_to": "Attendance Request",
    "stats_filter": "[]",
    "type": "DocType"
   }

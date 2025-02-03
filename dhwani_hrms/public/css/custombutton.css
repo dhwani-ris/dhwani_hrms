@@ -43,7 +43,7 @@ body.light-theme {
 
 }
 body.light-theme .layout-main-section{
-    background-color: #f3f4f7 !important;
+    background-color: #f9f9f9 !important;
 }
 body.light-theme .editable-form{
     background-color: #f3f4f7 !important;
@@ -128,5 +128,56 @@ body.light-theme  .help-box .small .text-muted:hover{
 body.light-theme  li.disabled a {
   color: white !important;
 }
+.sidebar-item-label{
+  height:32px;
+}
 
+.sidebar-item-container .is-draggable{
+  height:45px;
+}
+.sidebar-item-label{
+  font-size:15px;
+}
 
+.icon  .icon-md{
+  height: 25px;
+  width: 21px;
+}
+.app-logo{
+  min-height: 41px !important;
+  width: 110px;
+}
+.layout-main-section{
+  background-color: #f9f9f9 !important;
+}
+
+.shortcut-widget-box{
+  background-color: #f9f9f9 !important;
+}
+.number{
+  --text-color: orange;
+}
+.spacer{
+  background-color: #f9f9f9 !important;
+}
+
+.number-widget-box {
+  border: 2px solid #e4e4e4 !important;
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.number-widget-box:hover {
+  border-color: #811622; /* Change border color on hover */
+  box-shadow: 0px 4px 10px rgba(180, 200, 230, 20); /* Add shadow with your color */
+  transform: translateY(-5px); /* Slight lift effect */
+}
+
+.dashboard-widget-box{
+  border: 2px solid #e4e4e4 !important;
+}
+.layout-main-section{
+  border: 2px solid #e4e4e4 !important;
+}
+.quick-list-widget-box{
+  border: 2px solid #e4e4e4 !important;
+}
