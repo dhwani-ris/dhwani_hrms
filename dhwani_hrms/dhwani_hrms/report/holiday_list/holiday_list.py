@@ -34,6 +34,7 @@ def execute(filters=None):
                 "holiday_date": holiday.holiday_date,
                 "day": day_name,  # Include day name
                 "description": holiday.description,
+                "count": 1,
             }
         )
 
@@ -41,6 +42,7 @@ def execute(filters=None):
         _("Holiday Date") + ":Date:120",
         _("Day") + ":Data:100",  # Add Day column
         _("Description") + ":Data:200",
+        {"fieldname": "count","fieldtype": "Int","label": "Count","hidden": 1,"width": "120"},
     ]
 
     return columns, holiday_data
