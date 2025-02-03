@@ -5,7 +5,7 @@
    "label": "My Leave Balance"
   }
  ],
- "content": "[{\"id\":\"NC0n5kVrwL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Me</span>\",\"col\":12}},{\"id\":\"GnTET0iyzJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Calendar\",\"col\":3}},{\"id\":\"AwVMq4flQi\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"My Teams\",\"col\":3}},{\"id\":\"sGqul4dY5K\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Attendance Request\",\"col\":3}},{\"id\":\"KI-kqq8cJA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Fill Timesheet\",\"col\":3}},{\"id\":\"U-1oMFWTMO\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Work From Home Request\",\"col\":3}},{\"id\":\"Rm1-ZzJTwC\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"RqS6NDfh6p\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Attendance\",\"col\":4}},{\"id\":\"w6e5FL5aAc\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Leave\",\"col\":4}},{\"id\":\"rt4pgPXo8n\",\"type\":\"chart\",\"data\":{\"chart_name\":\"My Leave Balance\",\"col\":6}}]",
+ "content": "[{\"id\":\"NC0n5kVrwL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Me</span>\",\"col\":12}},{\"id\":\"GnTET0iyzJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Calendar\",\"col\":3}},{\"id\":\"AwVMq4flQi\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"My Teams\",\"col\":3}},{\"id\":\"sGqul4dY5K\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Attendance Request\",\"col\":3}},{\"id\":\"KI-kqq8cJA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Fill Timesheet\",\"col\":3}},{\"id\":\"U-1oMFWTMO\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Work From Home Request\",\"col\":3}},{\"id\":\"Rm1-ZzJTwC\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"RqS6NDfh6p\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Attendance\",\"col\":4}},{\"id\":\"w6e5FL5aAc\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Leave\",\"col\":4}},{\"id\":\"HEEh9FW5E8\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"All Timesheet\",\"col\":4}},{\"id\":\"rt4pgPXo8n\",\"type\":\"chart\",\"data\":{\"chart_name\":\"My Leave Balance\",\"col\":6}}]",
  "creation": "2025-01-15 15:08:00.869514",
  "custom_blocks": [],
  "docstatus": 0,
@@ -18,11 +18,15 @@
  "is_hidden": 0,
  "label": "Me",
  "links": [],
- "modified": "2025-02-03 15:12:25.248295",
+ "modified": "2025-02-03 16:20:05.914756",
  "modified_by": "Administrator",
  "module": "Dhwani Hrms",
  "name": "Me",
  "number_cards": [
+  {
+   "label": "All Timesheet",
+   "number_card_name": "My timesheet"
+  },
   {
    "label": "Attendance",
    "number_card_name": "My Attendnce"
