@@ -18,7 +18,7 @@
  "is_hidden": 0,
  "label": "Me",
  "links": [],
- "modified": "2025-02-03 16:20:05.914756",
+ "modified": "2025-02-04 16:23:28.735077",
  "modified_by": "Administrator",
  "module": "Dhwani Hrms",
  "name": "Me",
@@ -55,7 +55,7 @@
    "color": "Grey",
    "doc_view": "List",
    "label": "Employee Calendar",
-   "link_to": "Employee Calender",
+   "link_to": "Employee Calendar",
    "type": "Report"
   },
   {
