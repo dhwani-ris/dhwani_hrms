@@ -1,5 +1,6 @@
 frappe.ui.form.on("Attendance Request", {
     refresh(frm){
+		customBreadCrumbs.add(frm.doctype, "Form", "My Attendance")
         if (frm.is_new()) {
 			frm.trigger("calculate_total_days");
 		}

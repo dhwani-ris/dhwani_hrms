@@ -1,5 +1,6 @@
 frappe.ui.form.on("Project", {
     refresh(frm) {
+        customBreadCrumbs.add(frm.doctype, "Form", "All Timesheet")
         const read_only_roles = ["Administrator", "HR Manager", "Projects Manager"];
         const current_user_roles = frappe.user_roles;
 

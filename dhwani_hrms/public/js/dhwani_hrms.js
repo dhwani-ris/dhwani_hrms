@@ -156,3 +156,15 @@ frappe.templates['navbar'] = `
 </div>
 
 `
+
+window.customBreadCrumbs = {
+    add: function (doctype, type, workspace=null) {
+        frappe.breadcrumbs.all[frappe.get_route_str()] = {
+            workspace: workspace || "Me",
+            doctype: doctype,
+            type: type
+        };
+        frappe.breadcrumbs.update();
+    },
+
+};

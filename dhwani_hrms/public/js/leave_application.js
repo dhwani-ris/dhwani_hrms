@@ -1,4 +1,7 @@
 frappe.ui.form.on("Leave Application", {
+    refresh: function (frm) {
+        customBreadCrumbs.add(frm.doctype,"List", "Leave")
+    },
     from_date: function (frm) {
         // Temporary flag to ensure the message is shown only once per interaction
         if (!frm.__from_date_alert_shown) {

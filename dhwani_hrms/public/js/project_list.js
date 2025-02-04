@@ -11,5 +11,8 @@ frappe.listview_settings["Project"] = {
 	},
 	refresh: function(listview) {
 		$("use.like-icon").hide();
- }
+ },
+ onload: function (listview) {
+	 customBreadCrumbs.add(listview.doctype, "List", "All Timesheet")
+ },
 }
