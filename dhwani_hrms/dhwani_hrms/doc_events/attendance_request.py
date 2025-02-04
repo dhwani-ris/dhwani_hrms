@@ -5,6 +5,7 @@ from frappe import _
 from hrms.hr.doctype.leave_application.leave_application import (
     get_holidays,
 )
+from dhwani_hrms.dhwani_hrms.utils.custom_send_email import send_email_notification  # Import the common function
 
 
 def validate(doc, method):
@@ -40,6 +41,23 @@ def on_cancel(doc, method):
         doc.custom_total_applied_days,
     )
 
+def on_update(doc, method):
+    if doc.workflow_state == "Review":
+        reports_to = frappe.get_value("Employee", doc.employee, ["reports_to"])
+        leave_approver_name,leave_approver_email = frappe.get_value("Employee", reports_to, ["employee_name","company_email"])
+        
+        if not leave_approver_email:
+            frappe.throw("Leave Approver is not set for this employee", title="Approver Not Found")
+        
+        leave_approver_name = frappe.get_value("Employee", reports_to, "employee_name")
+        send_email_notification(doc, leave_approver_email, "Approval Request", leave_approver_name)
+        
+def on_cancel(doc, method):
+    if doc.workflow_state == "Rejected":
+        send_email_notification(doc, doc.owner, "Cancellation",doc.employee_name)
+        
+def on_update_after_submit(doc, method):  
+    send_email_notification(doc, doc.owner, "Approval",doc.employee_name)
 
 # dhwani_hrms.dhwani_hrms.doc_events.attendance_request.get_number_of_leave_days
 @frappe.whitelist()

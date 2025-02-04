@@ -29,6 +29,8 @@ app_license = "mit"
 # app_include_js = "/assets/dhwani_hrms/js/dhwani_hrms.js"
 app_include_js = [
     "/assets/dhwani_hrms/js/dhwani_hrms.js",
+    "/assets/dhwani_hrms/js/user_profile.js",
+
 ]
 # include js, css files in header of web template
 app_include_css = "/assets/dhwani_hrms/css/custombutton.css"
@@ -164,6 +166,8 @@ doc_events = {
         "on_cancel": "dhwani_hrms.dhwani_hrms.doc_events.attendance_request.on_cancel",
         "on_submit": "dhwani_hrms.dhwani_hrms.doc_events.attendance_request.on_submit",
         "validate": "dhwani_hrms.dhwani_hrms.doc_events.attendance_request.validate",
+        "on_update": "dhwani_hrms.dhwani_hrms.doc_events.attendance_request.on_update",
+        "on_update_after_submit": "dhwani_hrms.dhwani_hrms.doc_events.attendance_request.on_update_after_submit",
     }
 }
 
