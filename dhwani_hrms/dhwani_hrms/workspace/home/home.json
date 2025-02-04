@@ -201,7 +201,7 @@
    "type": "Link"
   }
  ],
- "modified": "2025-02-03 18:41:41.651787",
+ "modified": "2025-02-04 18:59:38.616960",
  "modified_by": "Administrator",
  "module": "Dhwani Hrms",
  "name": "Home",
@@ -231,6 +231,9 @@
  "roles": [
   {
    "role": "All"
+  },
+  {
+   "role": "Employee"
   }
  ],
  "sequence_id": 1.0,
