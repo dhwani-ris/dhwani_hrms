@@ -14,8 +14,9 @@ frappe.listview_settings["Attendance"] = {
 	},
 
 	onload: function (list_view) {	
-		
 		customBreadCrumbs.add(list_view.doctype,"List", "My Attendance")
+		if (frappe.user_roles.includes("HR Manager") || frappe.user_roles.includes("HR User") || frappe.user_roles.includes("System Manager")) {
+		
 		let me = this;
 
 		list_view.page.add_inner_button(__("Mark Attendance"), function () {
@@ -133,6 +134,7 @@ frappe.listview_settings["Attendance"] = {
 			});
 			dialog.show();
 		});
+	}
 	},
 
 	reset_dialog: function (dialog) {
