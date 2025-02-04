@@ -10,7 +10,7 @@
  "is_standard": 1,
  "label": "Upcoming Birthdays",
  "method": "dhwani_hrms.dhwani_hrms.custom_number_cards.upcoming_birthdays_card.get_upcoming_birthday_report",
- "modified": "2025-01-31 18:30:51.468301",
+ "modified": "2025-02-03 12:48:50.904407",
  "modified_by": "Administrator",
  "module": "Dhwani Hrms",
  "name": "Upcoming Birthdays",

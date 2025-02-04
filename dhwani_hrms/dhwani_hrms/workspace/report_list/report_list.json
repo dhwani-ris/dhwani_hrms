@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Report List",
  "links": [],
- "modified": "2025-01-27 15:04:35.228996",
+ "modified": "2025-02-03 16:31:33.813983",
  "modified_by": "Administrator",
  "module": "Dhwani Hrms",
  "name": "Report List",
@@ -27,13 +27,20 @@
    "role": "System Manager"
   }
  ],
- "sequence_id": 47.0,
+ "sequence_id": 45.0,
  "shortcuts": [
   {
    "color": "Grey",
    "doc_view": "List",
    "label": "Leave Ledger",
    "link_to": "Leave Ledger",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Dhwani Shift & Attendance",
+   "link_to": "Shift Attendance",
    "type": "Report"
   },
   {
@@ -111,13 +118,6 @@
    "doc_view": "List",
    "label": "Monthly Attendance Sheet",
    "link_to": "Monthly Attendance Sheet",
-   "type": "Report"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Dhwani Shift & Attendance",
-   "link_to": "Dhwani Shift & Attendance",
    "type": "Report"
   },
   {
