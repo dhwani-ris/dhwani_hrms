@@ -52,6 +52,9 @@ doctype_js = {
     "Attendance Request": "public/js/attendance_request.js",
     "Employee": "public/js/employee.js",
     "Project": "public/js/project.js",
+    "Attendance": "public/js/attendance.js",
+    "Employee Checkin": "public/js/employee_checkin.js",
+    "Compensatory Leave Request": "public/js/compensatory_leave_request.js",
 }
 
 doctype_list_js = {
@@ -59,6 +62,10 @@ doctype_list_js = {
     "Project": "public/js/project_list.js",
     "Timesheet": "public/js/timesheet_list.js",
     "Attendance": "public/js/attendance_list.js",
+    "Employee Checkin": "public/js/employee_checkin_list.js",
+    "Attendance Request": "public/js/attendance_request_list.js",
+    "Leave Application": "public/js/leave_application_list.js",
+    "Compensatory Leave Request": "public/js/compensatory_leave_request_list.js",
 }
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}

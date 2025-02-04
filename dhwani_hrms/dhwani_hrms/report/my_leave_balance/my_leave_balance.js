@@ -7,7 +7,8 @@ frappe.query_reports["My Leave Balance"] = {
 			options: "Leave Type", // This assumes Leave Type is a DocType
             
 		}
-
-
-	]
+	],
+	onload: function (report) {
+		customBreadCrumbs.add(report.doctype, "Report", "Leave")
+	},
 };
