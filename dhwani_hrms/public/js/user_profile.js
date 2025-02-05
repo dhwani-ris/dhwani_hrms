@@ -18,7 +18,7 @@ $(document).ready(function () {
                             let employee_id = response.message.name;
                             if (employee_id) {
                                 // Redirect to the employee profile  
-                                window.location.href = `/app/employee/${employee_id}`;
+                                frappe.set_route("Form", "Employee", employee_id);
                             } else {
                                 frappe.msgprint("Employee profile not found.");
                             }
