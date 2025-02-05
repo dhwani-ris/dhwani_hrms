@@ -184,3 +184,6 @@ body.light-theme  li.disabled a {
 .legend-dataset-label{
   font-size: 10px;
 }
+#navbar-breadcrumbs li.disabled a{
+  color: white;
+}
