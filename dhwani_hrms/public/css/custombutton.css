@@ -1,0 +1,186 @@
+.btn.btn-primary {
+    background-color: #811622;
+    color: var(--neutral);
+    --icon-stroke: currentColor;
+    --icon-fill-bg: #811622;
+    white-space: nowrap;
+    color: antiquewhite;
+}    
+.navbar{
+    background-color: #811622 !important;
+}
+.navbar-expand{
+    background-color: #811622 !important;
+}
+ .navbar .icon, .navbar .es-icon {
+    stroke: white !important; 
+    fill: white !important; 
+}
+
+.navbar .search-icon svg {
+    stroke: black !important;  
+    fill: black;
+    
+}
+
+navbar-breadcrumbs a {
+  margin-right: 10px;
+}
+
+/* OR if you're just using a background image or icon font: */
+.navbar .search-icon {  /* Targets the search icon container */
+    color: black !important; /* Sets text/icon color */
+}
+body.light-theme {
+  --background-color: #f3f4f7;
+  --input-height: 33px;
+  --input-font-size: 14px;
+  --hover-border-color: #76618b;
+  --hover-box-shadow: 0 0 8px rgba(118, 97, 139, 0.6);
+  --text-muted-height:33px; /* new added */
+  --widget-head-height:49px; /* new added */
+  --min-widget-height:55px;/* new added */
+
+}
+body.light-theme .layout-main-section{
+    background-color: #f9f9f9 !important;
+}
+body.light-theme .editable-form{
+    background-color: #f3f4f7 !important;
+}
+
+
+/* Existing styles modified to use CSS variables */
+body.light-theme #page-Leave\ Application {
+  background-color: var(--background-color) !important; 
+}
+
+body.light-theme .widget-head {
+  height: var(--widget-head-height); /* new modified */
+}
+
+body.light-theme .widget.shortcut-widget-box {
+  cursor: pointer;
+  padding: 2px 7px;
+  align-items: flex-start;
+  min-height: var(--min-widget-height); /* new modified */
+  border-radius: 0;
+  transition: all 0.6s ease;
+}
+
+body.light-theme .spacer{
+  background-color: var(--background-color) !important;
+}
+
+body.light-theme .content .page-container{
+  background-color: var(--background-color);
+}
+
+body.light-theme .list-row-container{
+  background-color: #ffff;
+}
+
+body.light-theme .frappe-list .list-row {
+  background-color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+body.light-theme .frappe-list .list-row:hover {
+  background-color: var(--background-color);
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+body.light-theme input[type="text"] {
+  height: var(--input-height);
+  padding: 0 10px;
+  font-size: var(--input-font-size);
+  background-color: var(--background-color);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+body.light-theme input:hover {
+  border-color: var(--hover-border-color);
+  box-shadow: var(--hover-box-shadow);
+  outline: none;
+}
+
+/* ... (similarly for select, option, .like-disabled-input,  and .help-box .small .text-muted) */
+body.light-theme .help-box .small .text-muted{
+  height: var(--text-muted-height); /* new modified */
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-size: var(--input-font-size);
+  background-color: var(--background-color);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.light-theme  .help-box .small .text-muted:hover{
+  border-color: var(--hover-border-color);
+  box-shadow: var(--hover-box-shadow);
+}
+
+
+#navbar-breadcrumbs{
+  --text-color:white;
+}
+
+body.light-theme  li.disabled a {
+  color: white !important;
+}
+.sidebar-item-label{
+  height:32px;
+}
+
+.sidebar-item-container .is-draggable{
+  height:45px;
+}
+.sidebar-item-label{
+  font-size:15px;
+}
+
+.icon  .icon-md{
+  height: 25px;
+  width: 21px;
+}
+.app-logo{
+  min-height: 41px !important;
+  width: 110px;
+}
+.layout-main-section{
+  background-color: #f9f9f9 !important;
+}
+
+.shortcut-widget-box{
+  background-color: #f9f9f9 !important;
+}
+.number{
+  --text-color: orange;
+}
+.spacer{
+  background-color: #f9f9f9 !important;
+}
+
+.number-widget-box {
+  border: 2px solid #e4e4e4 !important;
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.number-widget-box:hover {
+  border-color: #811622; /* Change border color on hover */
+  box-shadow: 0px 4px 10px rgba(180, 200, 230, 20); /* Add shadow with your color */
+  transform: translateY(-5px); /* Slight lift effect */
+}
+
+.dashboard-widget-box{
+  border: 2px solid #e4e4e4 !important;
+}
+.layout-main-section{
+  border: 2px solid #e4e4e4 !important;
+}
+.quick-list-widget-box{
+  border: 2px solid #e4e4e4 !important;
+}
+.legend-dataset-label{
+  font-size: 10px;
+}
