@@ -27,3 +27,16 @@ def get_current_user_leaves():
         "route_options": {"employee": employee},
         "route": ["List", "Leave Application"],
     }
+
+#dhwani_hrms.dhwani_hrms.custom_number_cards.me.get_current_user_attendance
+@frappe.whitelist()
+def get_current_user_attendance():
+    user = frappe.session.user
+    employee = frappe.db.get_value("Employee", {"user_id": user}, "name")
+    leave_count = frappe.db.count("Attendance", filters={"employee": employee})
+    return {
+        "value": leave_count,
+        "fieldtype": "int",
+        "route_options": {"employee": employee},
+        "route": ["List", "Attendance"],
+    }
