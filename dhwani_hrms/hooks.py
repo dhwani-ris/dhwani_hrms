@@ -168,6 +168,9 @@ doc_events = {
         "validate": "dhwani_hrms.dhwani_hrms.doc_events.attendance_request.validate",
         "on_update": "dhwani_hrms.dhwani_hrms.doc_events.attendance_request.on_update",
         "on_update_after_submit": "dhwani_hrms.dhwani_hrms.doc_events.attendance_request.on_update_after_submit",
+    },
+    "Employee": {
+        "before_save": "dhwani_hrms.dhwani_hrms.doc_events.employee.before_save",
     }
 }
 
