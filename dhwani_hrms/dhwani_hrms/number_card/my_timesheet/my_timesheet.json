@@ -4,14 +4,15 @@
  "docstatus": 0,
  "doctype": "Number Card",
  "document_type": "Timesheet",
- "dynamic_filters_json": "[]",
+ "dynamic_filters_json": "[[\"Timesheet\",\"employee\",\"=\",\"frappe.db.get_value(\\\"Employee\\\", {\\\"user_id\\\": frappe.session.user}, 'name')\"]]",
  "filters_json": "[]",
  "function": "Count",
  "idx": 0,
  "is_public": 0,
  "is_standard": 1,
  "label": "My timesheet",
- "modified": "2025-01-15 18:40:55.404603",
+ "method": "dhwani_hrms.dhwani_hrms.custom_number_cards.me.get_current_user_timesheet",
+ "modified": "2025-02-05 16:02:36.634535",
  "modified_by": "Administrator",
  "module": "Dhwani Hrms",
  "name": "My timesheet",
@@ -20,5 +21,5 @@
  "report_function": "Sum",
  "show_percentage_stats": 0,
  "stats_time_interval": "Weekly",
- "type": "Document Type"
+ "type": "Custom"
 }

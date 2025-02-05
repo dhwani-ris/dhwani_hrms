@@ -365,6 +365,7 @@ def get_employee_related_details(filters: Filters) -> tuple[dict, list]:
         )
         .where(Employee.company.isin(filters.companies))
         .where(Employee.name.notin([1, 2]))
+        .where(Employee.status == "Active")
     )
 
     if filters.employee:
