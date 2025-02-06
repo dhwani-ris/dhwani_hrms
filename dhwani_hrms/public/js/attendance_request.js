@@ -38,6 +38,13 @@ frappe.ui.form.on("Attendance Request", {
 			});
 		}
 	},
+    validate: function(frm) {
+        // Additional validation if the field is required but not checked
+        if (frm.doc.reason == 'On Duty(Comp Off)' && !frm.doc.include_holidays) {
+            frappe.msgprint(__('Please select Include Holidays as this is required when On Duty(Comp Off) is selected.'));
+            frappe.validated = false;  // Prevent form submission
+        }
+    }
+        
+
 });
-
-
