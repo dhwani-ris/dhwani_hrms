@@ -5,5 +5,5 @@ def before_save(doc, method):
         doc.employee_number = doc.custom_employee_no  # Assign value directly
         doc.name = doc.custom_employee_no
     else:
-        frappe.throw("Please enter Employee Number")  # Ensure custom_employee_no is filled
+        frappe.throw("Please enter Employee Number")  
 
