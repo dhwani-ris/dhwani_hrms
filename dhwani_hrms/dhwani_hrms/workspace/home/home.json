@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"kb3XPLg8lb\",\"type\":\"header\",\"data\":{\"text\":\"<span style=\\\"font-size: 18px; letter-spacing: 0.18px;\\\"><b>Home</b></span>\",\"col\":12}},{\"id\":\"d_KVM1gsf9\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"qT-ZTlzS3d\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Holidays\",\"col\":4}},{\"id\":\"jrQ02kQmeg\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"On Leave Today\",\"col\":4}},{\"id\":\"xWDOTRoyXV\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Upcoming Birthdays\",\"col\":4}},{\"id\":\"UohtK4_NoD\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Upcoming Anniversary\",\"col\":4}},{\"id\":\"vJLjRQRnKH\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"-7pXMCCn0K\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b></b></span><b>Quick Links</b>\",\"col\":12}},{\"id\":\"VAK0r_sirV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"WhatsApp Group\",\"col\":3}},{\"id\":\"h_QoL_v_Sb\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Meal\",\"col\":3}},{\"id\":\"0SL-CTePsD\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Razorpay Portal\",\"col\":3}},{\"id\":\"e0B4Llv4zZ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Leave Policy\",\"col\":3}}]",
+ "content": "[{\"id\":\"kb3XPLg8lb\",\"type\":\"header\",\"data\":{\"text\":\"<span style=\\\"font-size: 18px; letter-spacing: 0.18px;\\\"><b>Home</b></span>\",\"col\":12}},{\"id\":\"d_KVM1gsf9\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"kSve2avf9p\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Upcoming Birthdays\",\"col\":3}},{\"id\":\"5iKa45GcD8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Work Anniversary\",\"col\":3}},{\"id\":\"DKJMTSSsgc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Today Onleave Report\",\"col\":3}},{\"id\":\"qT-ZTlzS3d\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Holidays\",\"col\":4}},{\"id\":\"jrQ02kQmeg\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"On Leave Today\",\"col\":4}},{\"id\":\"xWDOTRoyXV\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Upcoming Birthdays\",\"col\":4}},{\"id\":\"UohtK4_NoD\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Upcoming Anniversary\",\"col\":4}},{\"id\":\"vJLjRQRnKH\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"-7pXMCCn0K\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b></b></span><b>Quick Links</b>\",\"col\":12}},{\"id\":\"VAK0r_sirV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"WhatsApp Group\",\"col\":3}},{\"id\":\"h_QoL_v_Sb\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Meal\",\"col\":3}},{\"id\":\"0SL-CTePsD\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Razorpay Portal\",\"col\":3}},{\"id\":\"e0B4Llv4zZ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Leave Policy\",\"col\":3}}]",
  "creation": "2020-01-23 13:46:38.833076",
  "custom_blocks": [],
  "docstatus": 0,
@@ -201,7 +201,7 @@
    "type": "Link"
   }
  ],
- "modified": "2025-02-04 18:59:38.616960",
+ "modified": "2025-02-06 15:14:30.045676",
  "modified_by": "Administrator",
  "module": "Dhwani Hrms",
  "name": "Home",
@@ -228,14 +228,7 @@
  "public": 1,
  "quick_lists": [],
  "restrict_to_domain": "",
- "roles": [
-  {
-   "role": "All"
-  },
-  {
-   "role": "Employee"
-  }
- ],
+ "roles": [],
  "sequence_id": 1.0,
  "shortcuts": [
   {
@@ -248,6 +241,13 @@
   {
    "color": "Grey",
    "doc_view": "List",
+   "label": "Upcoming Birthdays",
+   "link_to": "Upcoming Birthdays",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
    "label": "WhatsApp Group",
    "type": "URL",
    "url": "https://chat.whatsapp.com/FZzxUsnEkVaD4UJwiI2CNO"
@@ -255,9 +255,23 @@
   {
    "color": "Grey",
    "doc_view": "List",
+   "label": "Work Anniversary",
+   "link_to": "Work Anniversary",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Meal",
    "type": "URL",
    "url": "https://chat.whatsapp.com/KOsqSmRPhjwBU7NZWfn1jf"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Today Onleave Report",
+   "link_to": "Today OnLeave Report",
+   "type": "Report"
   },
   {
    "color": "Grey",
