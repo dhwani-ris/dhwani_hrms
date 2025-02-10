@@ -62,7 +62,6 @@ def on_update_after_submit(doc, method):
 
 def before_save(doc, method):
     if doc.reason == "On Duty(Regularize)":
-        frappe.msgprint("hellloo")
         validate_regularization_limit(doc)
 
 def validate_regularization_limit(doc):
