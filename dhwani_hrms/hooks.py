@@ -30,9 +30,8 @@ app_license = "mit"
 app_include_js = [
     "/assets/dhwani_hrms/js/dhwani_hrms.js",
     "/assets/dhwani_hrms/js/user_profile.js",
-
 ]
-# include js, css files in header of web template
+# include js, css files in header of web template"/assets/dhwani_hrms/js/dashboard_custom.js",
 app_include_css = "/assets/dhwani_hrms/css/custombutton.css"
 # web_include_css = "/assets/dhwani_hrms/css/dhwani_hrms.css"
 # web_include_js = "/assets/dhwani_hrms/js/dhwani_hrms.js"
@@ -168,6 +167,7 @@ doc_events = {
         "validate": "dhwani_hrms.dhwani_hrms.doc_events.attendance_request.validate",
         "on_update": "dhwani_hrms.dhwani_hrms.doc_events.attendance_request.on_update",
         "on_update_after_submit": "dhwani_hrms.dhwani_hrms.doc_events.attendance_request.on_update_after_submit",
+        "before_save": "dhwani_hrms.dhwani_hrms.doc_events.attendance_request.before_save",
     },
     "Employee": {
         "before_save": "dhwani_hrms.dhwani_hrms.doc_events.employee.before_save",

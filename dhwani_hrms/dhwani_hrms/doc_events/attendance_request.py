@@ -6,7 +6,8 @@ from hrms.hr.doctype.leave_application.leave_application import (
     get_holidays,
 )
 from dhwani_hrms.dhwani_hrms.utils.custom_send_email import send_email_notification  # Import the common function
-
+from frappe.utils import get_first_day, get_last_day, getdate
+from datetime import timedelta
 
 def validate(doc, method):
     if doc.reason == "Work From Home":
@@ -58,6 +59,45 @@ def on_cancel(doc, method):
         
 def on_update_after_submit(doc, method):  
     send_email_notification(doc, doc.owner, "Approval",doc.employee_name)
+
+def before_save(doc, method):
+    if doc.reason == "On Duty(Regularize)":
+        frappe.msgprint("hellloo")
+        validate_regularization_limit(doc)
+
+def validate_regularization_limit(doc):
+    from_date = getdate(doc.from_date)  # Convert to date object
+
+    # Calculate month start and end
+    month_start = get_first_day(from_date)
+    month_end = get_last_day(from_date)
+
+    # Calculate week start (Monday) and week end (Sunday)
+    week_start = from_date - timedelta(days=from_date.weekday())  # Monday of the week
+    week_end = week_start + timedelta(days=6)  # Sunday of the same week
+
+    # Count monthly regularization requests
+    monthly_count = frappe.db.count("Attendance Request", {
+        "employee": doc.employee,
+        "reason": "On Duty(Regularize)",
+        "from_date": ["between", [month_start, month_end]],
+        "docstatus": 1  # Only consider submitted requests
+    })
+
+    # Count weekly regularization requests
+    weekly_count = frappe.db.count("Attendance Request", {
+        "employee": doc.employee,
+        "reason": "On Duty(Regularize)",
+        "from_date": ["between", [week_start, week_end]],
+        "docstatus": 1
+    })
+
+    # Validation checks
+    if monthly_count >= 4:
+        frappe.throw("You have finished your regularization for this month.")
+
+    if weekly_count >= 1:
+        frappe.throw("You can regularize only once per week.")
 
 # dhwani_hrms.dhwani_hrms.doc_events.attendance_request.get_number_of_leave_days
 @frappe.whitelist()

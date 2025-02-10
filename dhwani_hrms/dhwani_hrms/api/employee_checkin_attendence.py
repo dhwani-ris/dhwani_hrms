@@ -19,7 +19,6 @@ def get_attendance_request(user):
         order_by="creation desc",
         limit_page_length=1
     )
-    print(attendance)
     if attendance:
         return attendance[0]  # Return first matching record
     else:
