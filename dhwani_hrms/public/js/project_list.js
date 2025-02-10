@@ -1,5 +1,6 @@
 frappe.listview_settings["Project"] = {
 	hide_name_column: true, // this part
+	hide_name_filter: true,
 	add_fields: ["status", "priority", "is_active", "percent_complete", "expected_end_date", "project_name"],
 	filters: [["status", "=", "Open"]],
 	get_indicator: function (doc) {
