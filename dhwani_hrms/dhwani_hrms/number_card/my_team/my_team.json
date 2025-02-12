@@ -8,7 +8,7 @@
  "filters_json": "[]",
  "function": "Count",
  "idx": 0,
- "is_public": 0,
+ "is_public": 1,
  "is_standard": 1,
  "label": "My Team",
  "modified": "2025-02-05 23:14:50.442361",
