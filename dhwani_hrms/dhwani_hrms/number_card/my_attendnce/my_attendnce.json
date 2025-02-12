@@ -9,7 +9,7 @@
  "filters_json": "[[\"Attendance\",\"status\",\"=\",\"Present\",false],[\"Attendance\",\"attendance_date\",\"Timespan\",\"last week\",false]]",
  "function": "Average",
  "idx": 0,
- "is_public": 0,
+ "is_public": 1,
  "is_standard": 1,
  "label": "My Attendnce",
  "method": "dhwani_hrms.dhwani_hrms.custom_number_cards.me.get_current_user_attendance",

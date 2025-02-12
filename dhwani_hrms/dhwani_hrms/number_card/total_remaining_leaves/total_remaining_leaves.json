@@ -6,7 +6,7 @@
  "filters_json": "{}",
  "function": "Count",
  "idx": 0,
- "is_public": 0,
+ "is_public": 1,
  "is_standard": 1,
  "label": "Total Remaining Leaves",
  "modified": "2025-01-27 12:39:45.794907",
