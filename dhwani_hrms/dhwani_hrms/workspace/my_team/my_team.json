@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "My Team",
  "links": [],
- "modified": "2025-02-06 23:07:34.872306",
+ "modified": "2025-02-12 18:32:47.652048",
  "modified_by": "Administrator",
  "module": "Dhwani Hrms",
  "name": "My Team",
@@ -33,10 +33,6 @@
   {
    "label": "Team Leave Application",
    "number_card_name": "Team Leave"
-  },
-  {
-   "label": "My Team Work From Home List",
-   "number_card_name": "Work Form Home"
   }
  ],
  "owner": "Administrator",
@@ -55,6 +51,9 @@
   },
   {
    "role": "HR Manager"
+  },
+  {
+   "role": "Employee"
   }
  ],
  "sequence_id": 3.0,
